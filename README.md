@@ -6,13 +6,15 @@
 
 # Stay awhile and listen
 
+* Domains and Wiki are gone. Please join us on IRC.
+* 
+
 * Read the [FAQ](http://wiki.mooege.org/FAQ) and check the [wiki](http://wiki.mooege.org/) before asking!
 * Read the [WARNING](https://github.com/mooege/mooege/blob/master/WARNING) before starting to use this software!
 * Check out [mooege.org](http://www.mooege.org) and the [forums](http://www.mooege.org/index).
 * IRC (**irc.synirc.net**):
   - **#mooege.chat** (general chat)
   - **#mooege** (dev talk)
-  - **#mooege.announce** (_only_ announcements and the commit feed)
 * [Twitter](http://twitter.com/#!/mooege), [Commit Feed](http://twitter.com/#!/mooegelog)
 
 # Welcome to mooege
