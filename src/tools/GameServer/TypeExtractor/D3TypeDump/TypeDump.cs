@@ -209,16 +209,29 @@ namespace D3TypeDump
         #endregion
 
         #region build 10057 addresses
-        const int OpcodeSwitch_Address = 0x008E6240;
-        const int TypeDescriptorsAddress = 0x0159A19C;
+        //const int OpcodeSwitch_Address = 0x008E6240;
+        //const int TypeDescriptorsAddress = 0x0159A19C;
+        //const int TypeDescriptorsOffset = 40;
+        //const int AttributesAddress = 0x0157D518;
+        //const int AttributeCount = 826;
+        //const int Attribute_Int = 0x01373660;
+        //const int Attribute_IntMinMax = 0x01373668;
+        //const int Attribute_FloatMinMax = 0x01373670;
+        //const int Attribute_Float16 = 0x01373678;
+        //const int Attribute_Float16Or32 = 0x01373680;
+        #endregion
+
+        #region build 1.0.3.10485 addresses
+        const int OpcodeSwitch_Address = 0x008F8740;
+        const int TypeDescriptorsAddress = 0x0159A194;
         const int TypeDescriptorsOffset = 40;
         const int AttributesAddress = 0x0157D518;
-        const int AttributeCount = 826;
-        const int Attribute_Int = 0x01373660;
-        const int Attribute_IntMinMax = 0x01373668;
-        const int Attribute_FloatMinMax = 0x01373670;
-        const int Attribute_Float16 = 0x01373678;
-        const int Attribute_Float16Or32 = 0x01373680;
+        const int AttributeCount = 825;
+        const int Attribute_Int = 0x1373F00;
+        const int Attribute_IntMinMax = 0x1373F08;
+        const int Attribute_FloatMinMax = 0x1373F10;
+        const int Attribute_Float16 = 0x1373F18;
+        const int Attribute_Float16Or32 = 0x1373F20;
         #endregion
 
         class GameMessageInfo
@@ -265,6 +278,7 @@ namespace D3TypeDump
                 gmi.Opcodes.Add(opcode);
             }
 
+            System.Console.WriteLine("{0} game message descriptors found", _gameMessageLookUp.Count());
         }
         #region Dump
         static TypeDescriptor DiscoverMessageDescriptors(Mem32 mem, Dictionary<int, TypeDescriptor> table, int offset)
