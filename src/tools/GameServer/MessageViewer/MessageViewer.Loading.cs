@@ -104,6 +104,43 @@ namespace GameMessageViewer
             return false;
         }
 
+        private void LoadWiresharkHex(string text)
+        {
+            Dictionary<string, TreeNode> actors = new Dictionary<string, TreeNode>();
+            Dictionary<string, TreeNode> questTree = new Dictionary<string, TreeNode>();
+            if (text.Contains(" "))
+            {
+                String[] rows = text.Split('\n');
+                String currentBuffer = "";
+                text = "";
+                for (int i = 0; i < rows.Length; i++)
+                {
+                    if (i > 0 && (rows[i].StartsWith(" ") ^ rows[i - 1].StartsWith(" ")))
+                    {
+                        // Buffer buffer = new Buffer(String_To_Bytes(currentBuffer));
+                        BufferNode newNode = new BufferNode(actors, questTree, "1");
+                        newNode.Append(String_To_Bytes(currentBuffer));
+                        //newNode.Start = text.Length;
+                        newNode.BackColor = rows[i].StartsWith(" ") ? newNode.BackColor = Color.LightCoral : Color.LightBlue;
+                        tree.Nodes.Add(newNode);
+                        text += currentBuffer;
+                        currentBuffer = "";
+                    }
+                    if (rows[i] == "")
+                        continue;
+                    currentBuffer += (rows[i].StartsWith(" ") ? rows[i].Substring(14, 3 * 16) : rows[i].Substring(10, 3 * 16)).Trim().Replace(" ", "");
+                }
+            }
+            else
+            {
+                //Buffer buffer = new Buffer(String_To_Bytes(text));
+                BufferNode newNode = new BufferNode(actors, questTree, "1");
+                newNode.Append(String_To_Bytes(text));
+                newNode.Parse();
+                tree.Nodes.Add(newNode);
+            }
+            ApplyFilter();
+        }
 
         //private void LoadWiresharkHex(string text)
         //{
