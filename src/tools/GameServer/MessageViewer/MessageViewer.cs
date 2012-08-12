@@ -316,8 +316,8 @@ namespace GameMessageViewer
                     LoadDump(File.ReadAllText(ofd.FileName));
                 if (Path.GetExtension(ofd.FileName).ToLower().Contains("cap"))
                     LoadPcap(ofd.FileName);
-                //if (Path.GetExtension(ofd.FileName).ToLower().Contains("hex"))
-                //    LoadWiresharkHex(File.ReadAllText(ofd.FileName));
+                if (Path.GetExtension(ofd.FileName).ToLower().Contains("hex"))
+                    LoadWiresharkHex(File.ReadAllText(ofd.FileName));
             }
         }
 
