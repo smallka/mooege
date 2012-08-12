@@ -77,60 +77,62 @@ namespace D3.Hero {
           "ZGlmZmljdWx0eRgCIAIoEToBMBIlChloaWdoZXN0X3BsYXllZF9xdWVzdF9z" + 
           "dGVwGAMgASgROgItMyJdChdRdWVzdFJld2FyZEhpc3RvcnlFbnRyeRIVCglz" + 
           "bm9fcXVlc3QYASACKA86Ai0xEhQKCHN0ZXBfdWlkGAIgAigROgItMRIVCgpk" + 
-          "aWZmaWN1bHR5GAMgAigROgEwIqEECgZEaWdlc3QSDwoHdmVyc2lvbhgBIAIo" + 
+          "aWZmaWN1bHR5GAMgAigROgEwIrYECgZEaWdlc3QSDwoHdmVyc2lvbhgBIAIo" + 
           "DRIrCgdoZXJvX2lkGAIgAigLMhouRDMuT25saW5lU2VydmljZS5FbnRpdHlJ" + 
           "ZBIRCgloZXJvX25hbWUYAyABKAkSEgoKZ2JpZF9jbGFzcxgEIAIoDxINCgVs" + 
           "ZXZlbBgFIAIoERIUCgxwbGF5ZXJfZmxhZ3MYBiACKA0SMgoQdmlzdWFsX2Vx" + 
           "dWlwbWVudBgHIAIoCzIYLkQzLkhlcm8uVmlzdWFsRXF1aXBtZW50EjEKDXF1" + 
           "ZXN0X2hpc3RvcnkYCCADKAsyGi5EMy5IZXJvLlF1ZXN0SGlzdG9yeUVudHJ5" + 
-          "EhcKD2xhc3RfcGxheWVkX2FjdBgKIAIoERIcChRoaWdoZXN0X3VubG9ja2Vk" + 
-          "X2FjdBgLIAIoERIeChZsYXN0X3BsYXllZF9kaWZmaWN1bHR5GAwgAigREiMK" + 
-          "G2hpZ2hlc3RfdW5sb2NrZWRfZGlmZmljdWx0eRgNIAIoERIZChFsYXN0X3Bs" + 
-          "YXllZF9xdWVzdBgOIAIoDxIeChZsYXN0X3BsYXllZF9xdWVzdF9zdGVwGA8g" + 
-          "AigREhYKC3RpbWVfcGxheWVkGBAgAigNOgEwEigKHGhpZ2hlc3RfY29tcGxl" + 
-          "dGVkX2RpZmZpY3VsdHkYESABKBE6Ai0xEhMKC2NyZWF0ZV90aW1lGBIgASgN" + 
-          "EhgKEGxhc3RfcGxheWVkX3RpbWUYEyABKA0i2QEKCERpZ2VzdFVJEhcKD2xh" + 
-          "c3RfcGxheWVkX2FjdBgBIAIoERIcChRoaWdoZXN0X3VubG9ja2VkX2FjdBgC" + 
-          "IAIoERIeChZsYXN0X3BsYXllZF9kaWZmaWN1bHR5GAMgAigREiMKG2hpZ2hl" + 
-          "c3RfdW5sb2NrZWRfZGlmZmljdWx0eRgEIAIoERIZChFsYXN0X3BsYXllZF9x" + 
-          "dWVzdBgFIAIoDxIeChZsYXN0X3BsYXllZF9xdWVzdF9zdGVwGAYgAigREhYK" + 
-          "C3RpbWVfcGxheWVkGAcgAigNOgEwIpoBCgpTYXZlZFF1ZXN0EhUKCXNub19x" + 
-          "dWVzdBgBIAIoDzoCLTESFQoKZGlmZmljdWx0eRgCIAIoEToBMBIcChBjdXJy" + 
-          "ZW50X3N0ZXBfdWlkGAMgAigROgItMRIbCg9vYmplY3RpdmVfc3RhdGUYBCAD" + 
-          "KBFCAhABEiMKF2ZhaWx1cmVfY29uZGl0aW9uX3N0YXRlGAUgAygRQgIQASIn" + 
-          "CgtMZWFybmVkTG9yZRIYChBzbm9fbG9yZV9sZWFybmVkGAEgAygPIlwKElNh" + 
-          "dmVkQ29udmVyc2F0aW9ucxIlCh1wbGF5ZWRfY29udmVyc2F0aW9uc19iaXRm" + 
-          "aWVsZBgBIAIoDBIfChdzbm9fc2F2ZWRfY29udmVyc2F0aW9ucxgCIAMoDyJl" + 
-          "ChNTYXZlUG9pbnREYXRhX1Byb3RvEhUKCXNub193b3JsZBgBIAIoDzoCLTES" + 
-          "HAoQc2F2ZXBvaW50X251bWJlchgCIAIoEToCLTESGQoOY3JlYXRlc19wb3J0" + 
-          "YWwYAyACKA06ATAiPQoNU2tpbGxXaXRoUnVuZRIVCglzbm9fc2tpbGwYASAC" + 
-          "KA86Ai0xEhUKCXJ1bmVfdHlwZRgCIAEoEToCLTEisQMKCVNhdmVkRGF0YRIW" + 
-          "Cgt0aW1lX3BsYXllZBgDIAIoDToBMBIeChNhY3RpdmF0ZWRfd2F5cG9pbnRz" + 
-          "GAQgAigNOgEwEjMKE2hpcmVsaW5nX3NhdmVkX2RhdGEYBSACKAsyFi5EMy5I" + 
-          "aXJlbGluZy5TYXZlZERhdGESGgoPbGFzdF9sZXZlbF90aW1lGAYgAigNOgEw" + 
-          "EioKDGxlYXJuZWRfbG9yZRgHIAIoCzIULkQzLkhlcm8uTGVhcm5lZExvcmUS" + 
-          "OAoTc2F2ZWRfY29udmVyc2F0aW9ucxgIIAIoCzIbLkQzLkhlcm8uU2F2ZWRD" + 
-          "b252ZXJzYXRpb25zEhIKCnNub190cmFpdHMYCiADKA8SMAoKc2F2ZV9wb2lu" + 
-          "dBgMIAIoCzIcLkQzLkhlcm8uU2F2ZVBvaW50RGF0YV9Qcm90bxIeChJnYmlk" + 
-          "X3BvdGlvbl9idXR0b24YDSACKA86Ai0xEi0KDWFjdGl2ZV9za2lsbHMYDiAD" + 
-          "KAsyFi5EMy5IZXJvLlNraWxsV2l0aFJ1bmUSIAoYc2tpbGxfc2xvdF9ldmVy" + 
-          "X2Fzc2lnbmVkGA8gAigMIjYKClRpbWVzdGFtcHMSEwoLY3JlYXRlX3RpbWUY" + 
-          "ASACKBISEwoLZGVsZXRlX3RpbWUYAiABKBIiuwIKD1NhdmVkRGVmaW5pdGlv" + 
-          "bhIPCgd2ZXJzaW9uGAEgAigNEh8KBmRpZ2VzdBgCIAEoCzIPLkQzLkhlcm8u" + 
-          "RGlnZXN0EkEKEHNhdmVkX2F0dHJpYnV0ZXMYAyACKAsyJy5EMy5BdHRyaWJ1" + 
-          "dGVTZXJpYWxpemVyLlNhdmVkQXR0cmlidXRlcxImCgpzYXZlZF9kYXRhGAQg" + 
-          "ASgLMhIuRDMuSGVyby5TYXZlZERhdGESKAoLc2F2ZWRfcXVlc3QYBSADKAsy" + 
-          "Ey5EMy5IZXJvLlNhdmVkUXVlc3QSIQoFaXRlbXMYBiABKAsyEi5EMy5JdGVt" + 
-          "cy5JdGVtTGlzdBI+ChRxdWVzdF9yZXdhcmRfaGlzdG9yeRgHIAMoCzIgLkQz" + 
-          "Lkhlcm8uUXVlc3RSZXdhcmRIaXN0b3J5RW50cnkiGAoITmFtZVRleHQSDAoE" + 
-          "bmFtZRgBIAIoCSI4CghIZXJvTGlzdBIsCghoZXJvX2lkcxgBIAMoCzIaLkQz" + 
-          "Lk9ubGluZVNlcnZpY2UuRW50aXR5SWQiLgoKRGlnZXN0TGlzdBIgCgdkaWdl" + 
-          "c3RzGAEgAygLMg8uRDMuSGVyby5EaWdlc3QiRQoQUXVlc3RIaXN0b3J5TGlz" + 
-          "dBIxCg1xdWVzdF9oaXN0b3J5GAEgAygLMhouRDMuSGVyby5RdWVzdEhpc3Rv" + 
-          "cnlFbnRyeSI7Cg5TYXZlZFF1ZXN0TGlzdBIpCgxzYXZlZF9xdWVzdHMYASAD" + 
-          "KAsyEy5EMy5IZXJvLlNhdmVkUXVlc3QiWAoWUXVlc3RSZXdhcmRIaXN0b3J5" + 
-          "TGlzdBI+ChRxdWVzdF9yZXdhcmRfaGlzdG9yeRgBIAMoCzIgLkQzLkhlcm8u" + 
-          "UXVlc3RSZXdhcmRIaXN0b3J5RW50cnk=");
+          "EhcKD2xhc3RfcGxheWVkX2FjdBgJIAIoERIcChRoaWdoZXN0X3VubG9ja2Vk" + 
+          "X2FjdBgKIAIoERIeChZsYXN0X3BsYXllZF9kaWZmaWN1bHR5GAsgAigREiMK" + 
+          "G2hpZ2hlc3RfdW5sb2NrZWRfZGlmZmljdWx0eRgMIAIoERIZChFsYXN0X3Bs" + 
+          "YXllZF9xdWVzdBgNIAIoDxIeChZsYXN0X3BsYXllZF9xdWVzdF9zdGVwGA4g" + 
+          "AigREhYKC3RpbWVfcGxheWVkGA8gAigNOgEwEigKHGhpZ2hlc3RfY29tcGxl" + 
+          "dGVkX2RpZmZpY3VsdHkYECABKBE6Ai0xEhMKC2NyZWF0ZV90aW1lGBEgASgN" + 
+          "EhgKEGxhc3RfcGxheWVkX3RpbWUYEiABKA0SEwoLZGVsZXRlX3RpbWUYEyAB" + 
+          "KA0i/wEKCERpZ2VzdFVJEhcKD2xhc3RfcGxheWVkX2FjdBgBIAIoERIcChRo" + 
+          "aWdoZXN0X3VubG9ja2VkX2FjdBgCIAIoERIeChZsYXN0X3BsYXllZF9kaWZm" + 
+          "aWN1bHR5GAMgAigREiMKG2hpZ2hlc3RfdW5sb2NrZWRfZGlmZmljdWx0eRgE" + 
+          "IAIoERIZChFsYXN0X3BsYXllZF9xdWVzdBgFIAIoDxIeChZsYXN0X3BsYXll" + 
+          "ZF9xdWVzdF9zdGVwGAYgAigREhYKC3RpbWVfcGxheWVkGAcgAigNOgEwEiQK" + 
+          "HGhpZ2hlc3RfY29tcGxldGVkX2RpZmZpY3VsdHkYCCABKBEimgEKClNhdmVk" + 
+          "UXVlc3QSFQoJc25vX3F1ZXN0GAEgAigPOgItMRIVCgpkaWZmaWN1bHR5GAIg" + 
+          "AigROgEwEhwKEGN1cnJlbnRfc3RlcF91aWQYAyACKBE6Ai0xEhsKD29iamVj" + 
+          "dGl2ZV9zdGF0ZRgEIAMoEUICEAESIwoXZmFpbHVyZV9jb25kaXRpb25fc3Rh" + 
+          "dGUYBSADKBFCAhABIicKC0xlYXJuZWRMb3JlEhgKEHNub19sb3JlX2xlYXJu" + 
+          "ZWQYASADKA8iXAoSU2F2ZWRDb252ZXJzYXRpb25zEiUKHXBsYXllZF9jb252" + 
+          "ZXJzYXRpb25zX2JpdGZpZWxkGAEgAigMEh8KF3Nub19zYXZlZF9jb252ZXJz" + 
+          "YXRpb25zGAIgAygPImUKE1NhdmVQb2ludERhdGFfUHJvdG8SFQoJc25vX3dv" + 
+          "cmxkGAEgAigPOgItMRIcChBzYXZlcG9pbnRfbnVtYmVyGAIgAigROgItMRIZ" + 
+          "Cg5jcmVhdGVzX3BvcnRhbBgDIAIoDToBMCI9Cg1Ta2lsbFdpdGhSdW5lEhUK" + 
+          "CXNub19za2lsbBgBIAIoDzoCLTESFQoJcnVuZV90eXBlGAIgASgROgItMSLL" + 
+          "AwoJU2F2ZWREYXRhEhYKC3RpbWVfcGxheWVkGAEgAigNOgEwEh4KE2FjdGl2" + 
+          "YXRlZF93YXlwb2ludHMYAiACKA06ATASMwoTaGlyZWxpbmdfc2F2ZWRfZGF0" + 
+          "YRgDIAIoCzIWLkQzLkhpcmVsaW5nLlNhdmVkRGF0YRIaCg9sYXN0X2xldmVs" + 
+          "X3RpbWUYBCACKA06ATASKgoMbGVhcm5lZF9sb3JlGAUgAigLMhQuRDMuSGVy" + 
+          "by5MZWFybmVkTG9yZRI4ChNzYXZlZF9jb252ZXJzYXRpb25zGAYgAigLMhsu" + 
+          "RDMuSGVyby5TYXZlZENvbnZlcnNhdGlvbnMSEgoKc25vX3RyYWl0cxgHIAMo" + 
+          "DxIwCgpzYXZlX3BvaW50GAggAigLMhwuRDMuSGVyby5TYXZlUG9pbnREYXRh" + 
+          "X1Byb3RvEh4KEmdiaWRfcG90aW9uX2J1dHRvbhgJIAIoDzoCLTESLQoNYWN0" + 
+          "aXZlX3NraWxscxgKIAMoCzIWLkQzLkhlcm8uU2tpbGxXaXRoUnVuZRIgChhz" + 
+          "a2lsbF9zbG90X2V2ZXJfYXNzaWduZWQYCyACKAwSGAoNc2tpbGxfdmVyc2lv" + 
+          "bhgMIAIoDToBMCI2CgpUaW1lc3RhbXBzEhMKC2NyZWF0ZV90aW1lGAEgAigS" + 
+          "EhMKC2RlbGV0ZV90aW1lGAIgASgSIrsCCg9TYXZlZERlZmluaXRpb24SDwoH" + 
+          "dmVyc2lvbhgBIAIoDRIfCgZkaWdlc3QYAiABKAsyDy5EMy5IZXJvLkRpZ2Vz" + 
+          "dBJBChBzYXZlZF9hdHRyaWJ1dGVzGAMgAigLMicuRDMuQXR0cmlidXRlU2Vy" + 
+          "aWFsaXplci5TYXZlZEF0dHJpYnV0ZXMSJgoKc2F2ZWRfZGF0YRgEIAEoCzIS" + 
+          "LkQzLkhlcm8uU2F2ZWREYXRhEigKC3NhdmVkX3F1ZXN0GAUgAygLMhMuRDMu" + 
+          "SGVyby5TYXZlZFF1ZXN0EiEKBWl0ZW1zGAYgASgLMhIuRDMuSXRlbXMuSXRl" + 
+          "bUxpc3QSPgoUcXVlc3RfcmV3YXJkX2hpc3RvcnkYByADKAsyIC5EMy5IZXJv" + 
+          "LlF1ZXN0UmV3YXJkSGlzdG9yeUVudHJ5IhgKCE5hbWVUZXh0EgwKBG5hbWUY" + 
+          "ASACKAkiOAoISGVyb0xpc3QSLAoIaGVyb19pZHMYASADKAsyGi5EMy5Pbmxp" + 
+          "bmVTZXJ2aWNlLkVudGl0eUlkIi4KCkRpZ2VzdExpc3QSIAoHZGlnZXN0cxgB" + 
+          "IAMoCzIPLkQzLkhlcm8uRGlnZXN0Ij8KEFF1ZXN0SGlzdG9yeUxpc3QSKwoH" + 
+          "aGlzdG9yeRgBIAMoCzIaLkQzLkhlcm8uUXVlc3RIaXN0b3J5RW50cnkiOwoO" + 
+          "U2F2ZWRRdWVzdExpc3QSKQoMc2F2ZWRfcXVlc3RzGAEgAygLMhMuRDMuSGVy" + 
+          "by5TYXZlZFF1ZXN0IlIKFlF1ZXN0UmV3YXJkSGlzdG9yeUxpc3QSOAoOcmV3" + 
+          "YXJkX2hpc3RvcnkYASADKAsyIC5EMy5IZXJvLlF1ZXN0UmV3YXJkSGlzdG9y" + 
+          "eUVudHJ5");
       pbd::FileDescriptor.InternalDescriptorAssigner assigner = delegate(pbd::FileDescriptor root) {
         descriptor = root;
         internal__static_D3_Hero_VisualItem__Descriptor = Descriptor.MessageTypes[0];
@@ -152,11 +154,11 @@ namespace D3.Hero {
         internal__static_D3_Hero_Digest__Descriptor = Descriptor.MessageTypes[4];
         internal__static_D3_Hero_Digest__FieldAccessorTable = 
             new pb::FieldAccess.FieldAccessorTable<global::D3.Hero.Digest, global::D3.Hero.Digest.Builder>(internal__static_D3_Hero_Digest__Descriptor,
-                new string[] { "Version", "HeroId", "HeroName", "GbidClass", "Level", "PlayerFlags", "VisualEquipment", "QuestHistory", "LastPlayedAct", "HighestUnlockedAct", "LastPlayedDifficulty", "HighestUnlockedDifficulty", "LastPlayedQuest", "LastPlayedQuestStep", "TimePlayed", "HighestCompletedDifficulty", "CreateTime", "LastPlayedTime", });
+                new string[] { "Version", "HeroId", "HeroName", "GbidClass", "Level", "PlayerFlags", "VisualEquipment", "QuestHistory", "LastPlayedAct", "HighestUnlockedAct", "LastPlayedDifficulty", "HighestUnlockedDifficulty", "LastPlayedQuest", "LastPlayedQuestStep", "TimePlayed", "HighestCompletedDifficulty", "CreateTime", "LastPlayedTime", "DeleteTime", });
         internal__static_D3_Hero_DigestUI__Descriptor = Descriptor.MessageTypes[5];
         internal__static_D3_Hero_DigestUI__FieldAccessorTable = 
             new pb::FieldAccess.FieldAccessorTable<global::D3.Hero.DigestUI, global::D3.Hero.DigestUI.Builder>(internal__static_D3_Hero_DigestUI__Descriptor,
-                new string[] { "LastPlayedAct", "HighestUnlockedAct", "LastPlayedDifficulty", "HighestUnlockedDifficulty", "LastPlayedQuest", "LastPlayedQuestStep", "TimePlayed", });
+                new string[] { "LastPlayedAct", "HighestUnlockedAct", "LastPlayedDifficulty", "HighestUnlockedDifficulty", "LastPlayedQuest", "LastPlayedQuestStep", "TimePlayed", "HighestCompletedDifficulty", });
         internal__static_D3_Hero_SavedQuest__Descriptor = Descriptor.MessageTypes[6];
         internal__static_D3_Hero_SavedQuest__FieldAccessorTable = 
             new pb::FieldAccess.FieldAccessorTable<global::D3.Hero.SavedQuest, global::D3.Hero.SavedQuest.Builder>(internal__static_D3_Hero_SavedQuest__Descriptor,
@@ -180,7 +182,7 @@ namespace D3.Hero {
         internal__static_D3_Hero_SavedData__Descriptor = Descriptor.MessageTypes[11];
         internal__static_D3_Hero_SavedData__FieldAccessorTable = 
             new pb::FieldAccess.FieldAccessorTable<global::D3.Hero.SavedData, global::D3.Hero.SavedData.Builder>(internal__static_D3_Hero_SavedData__Descriptor,
-                new string[] { "TimePlayed", "ActivatedWaypoints", "HirelingSavedData", "LastLevelTime", "LearnedLore", "SavedConversations", "SnoTraits", "SavePoint", "GbidPotionButton", "ActiveSkills", "SkillSlotEverAssigned", });
+                new string[] { "TimePlayed", "ActivatedWaypoints", "HirelingSavedData", "LastLevelTime", "LearnedLore", "SavedConversations", "SnoTraits", "SavePoint", "GbidPotionButton", "ActiveSkills", "SkillSlotEverAssigned", "SkillVersion", });
         internal__static_D3_Hero_Timestamps__Descriptor = Descriptor.MessageTypes[12];
         internal__static_D3_Hero_Timestamps__FieldAccessorTable = 
             new pb::FieldAccess.FieldAccessorTable<global::D3.Hero.Timestamps, global::D3.Hero.Timestamps.Builder>(internal__static_D3_Hero_Timestamps__Descriptor,
@@ -201,18 +203,18 @@ namespace D3.Hero {
         internal__static_D3_Hero_DigestList__FieldAccessorTable = 
             new pb::FieldAccess.FieldAccessorTable<global::D3.Hero.DigestList, global::D3.Hero.DigestList.Builder>(internal__static_D3_Hero_DigestList__Descriptor,
                 new string[] { "Digests", });
-/*        internal__static_D3_Hero_QuestHistoryList__Descriptor = Descriptor.MessageTypes[17];
+        internal__static_D3_Hero_QuestHistoryList__Descriptor = Descriptor.MessageTypes[17];
         internal__static_D3_Hero_QuestHistoryList__FieldAccessorTable = 
             new pb::FieldAccess.FieldAccessorTable<global::D3.Hero.QuestHistoryList, global::D3.Hero.QuestHistoryList.Builder>(internal__static_D3_Hero_QuestHistoryList__Descriptor,
-                new string[] { "QuestHistoryProp", });*/
+                new string[] { "History", });
         internal__static_D3_Hero_SavedQuestList__Descriptor = Descriptor.MessageTypes[18];
         internal__static_D3_Hero_SavedQuestList__FieldAccessorTable = 
             new pb::FieldAccess.FieldAccessorTable<global::D3.Hero.SavedQuestList, global::D3.Hero.SavedQuestList.Builder>(internal__static_D3_Hero_SavedQuestList__Descriptor,
                 new string[] { "SavedQuests", });
-/*        internal__static_D3_Hero_QuestRewardHistoryList__Descriptor = Descriptor.MessageTypes[19];
+        internal__static_D3_Hero_QuestRewardHistoryList__Descriptor = Descriptor.MessageTypes[19];
         internal__static_D3_Hero_QuestRewardHistoryList__FieldAccessorTable = 
             new pb::FieldAccess.FieldAccessorTable<global::D3.Hero.QuestRewardHistoryList, global::D3.Hero.QuestRewardHistoryList.Builder>(internal__static_D3_Hero_QuestRewardHistoryList__Descriptor,
-                new string[] { "QuestRewardHistory", });*/
+                new string[] { "RewardHistory", });
         return null;
       };
       pbd::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
@@ -1662,8 +1664,8 @@ namespace D3.Hero {
   public sealed partial class Digest : pb::GeneratedMessage<Digest, Digest.Builder> {
     private Digest() { }
     private static readonly Digest defaultInstance = new Digest().MakeReadOnly();
-    private static readonly string[] _digestFieldNames = new string[] { "create_time", "gbid_class", "hero_id", "hero_name", "highest_completed_difficulty", "highest_unlocked_act", "highest_unlocked_difficulty", "last_played_act", "last_played_difficulty", "last_played_quest", "last_played_quest_step", "last_played_time", "level", "player_flags", "quest_history", "time_played", "version", "visual_equipment" };
-    private static readonly uint[] _digestFieldTags = new uint[] { 144, 37, 18, 26, 136, 88, 104, 80, 96, 117, 120, 152, 40, 48, 66, 128, 8, 58 };
+    private static readonly string[] _digestFieldNames = new string[] { "create_time", "delete_time", "gbid_class", "hero_id", "hero_name", "highest_completed_difficulty", "highest_unlocked_act", "highest_unlocked_difficulty", "last_played_act", "last_played_difficulty", "last_played_quest", "last_played_quest_step", "last_played_time", "level", "player_flags", "quest_history", "time_played", "version", "visual_equipment" };
+    private static readonly uint[] _digestFieldTags = new uint[] { 136, 152, 37, 18, 26, 128, 80, 96, 72, 88, 109, 112, 144, 40, 48, 66, 120, 8, 58 };
     public static Digest DefaultInstance {
       get { return defaultInstance; }
     }
@@ -1766,7 +1768,7 @@ namespace D3.Hero {
       return questHistory_[index];
     }
     
-    public const int LastPlayedActFieldNumber = 10;
+    public const int LastPlayedActFieldNumber = 9;
     private bool hasLastPlayedAct;
     private int lastPlayedAct_;
     public bool HasLastPlayedAct {
@@ -1776,7 +1778,7 @@ namespace D3.Hero {
       get { return lastPlayedAct_; }
     }
     
-    public const int HighestUnlockedActFieldNumber = 11;
+    public const int HighestUnlockedActFieldNumber = 10;
     private bool hasHighestUnlockedAct;
     private int highestUnlockedAct_;
     public bool HasHighestUnlockedAct {
@@ -1786,7 +1788,7 @@ namespace D3.Hero {
       get { return highestUnlockedAct_; }
     }
     
-    public const int LastPlayedDifficultyFieldNumber = 12;
+    public const int LastPlayedDifficultyFieldNumber = 11;
     private bool hasLastPlayedDifficulty;
     private int lastPlayedDifficulty_;
     public bool HasLastPlayedDifficulty {
@@ -1796,7 +1798,7 @@ namespace D3.Hero {
       get { return lastPlayedDifficulty_; }
     }
     
-    public const int HighestUnlockedDifficultyFieldNumber = 13;
+    public const int HighestUnlockedDifficultyFieldNumber = 12;
     private bool hasHighestUnlockedDifficulty;
     private int highestUnlockedDifficulty_;
     public bool HasHighestUnlockedDifficulty {
@@ -1806,7 +1808,7 @@ namespace D3.Hero {
       get { return highestUnlockedDifficulty_; }
     }
     
-    public const int LastPlayedQuestFieldNumber = 14;
+    public const int LastPlayedQuestFieldNumber = 13;
     private bool hasLastPlayedQuest;
     private int lastPlayedQuest_;
     public bool HasLastPlayedQuest {
@@ -1816,7 +1818,7 @@ namespace D3.Hero {
       get { return lastPlayedQuest_; }
     }
     
-    public const int LastPlayedQuestStepFieldNumber = 15;
+    public const int LastPlayedQuestStepFieldNumber = 14;
     private bool hasLastPlayedQuestStep;
     private int lastPlayedQuestStep_;
     public bool HasLastPlayedQuestStep {
@@ -1826,7 +1828,7 @@ namespace D3.Hero {
       get { return lastPlayedQuestStep_; }
     }
     
-    public const int TimePlayedFieldNumber = 16;
+    public const int TimePlayedFieldNumber = 15;
     private bool hasTimePlayed;
     private uint timePlayed_;
     public bool HasTimePlayed {
@@ -1836,7 +1838,7 @@ namespace D3.Hero {
       get { return timePlayed_; }
     }
     
-    public const int HighestCompletedDifficultyFieldNumber = 17;
+    public const int HighestCompletedDifficultyFieldNumber = 16;
     private bool hasHighestCompletedDifficulty;
     private int highestCompletedDifficulty_ = -1;
     public bool HasHighestCompletedDifficulty {
@@ -1846,7 +1848,7 @@ namespace D3.Hero {
       get { return highestCompletedDifficulty_; }
     }
     
-    public const int CreateTimeFieldNumber = 18;
+    public const int CreateTimeFieldNumber = 17;
     private bool hasCreateTime;
     private uint createTime_;
     public bool HasCreateTime {
@@ -1856,7 +1858,7 @@ namespace D3.Hero {
       get { return createTime_; }
     }
     
-    public const int LastPlayedTimeFieldNumber = 19;
+    public const int LastPlayedTimeFieldNumber = 18;
     private bool hasLastPlayedTime;
     private uint lastPlayedTime_;
     public bool HasLastPlayedTime {
@@ -1864,6 +1866,16 @@ namespace D3.Hero {
     }
     public uint LastPlayedTime {
       get { return lastPlayedTime_; }
+    }
+    
+    public const int DeleteTimeFieldNumber = 19;
+    private bool hasDeleteTime;
+    private uint deleteTime_;
+    public bool HasDeleteTime {
+      get { return hasDeleteTime; }
+    }
+    public uint DeleteTime {
+      get { return deleteTime_; }
     }
     
     public override bool IsInitialized {
@@ -1893,58 +1905,61 @@ namespace D3.Hero {
       int size = SerializedSize;
       string[] field_names = _digestFieldNames;
       if (hasVersion) {
-        output.WriteUInt32(1, field_names[16], Version);
+        output.WriteUInt32(1, field_names[17], Version);
       }
       if (hasHeroId) {
-        output.WriteMessage(2, field_names[2], HeroId);
+        output.WriteMessage(2, field_names[3], HeroId);
       }
       if (hasHeroName) {
-        output.WriteString(3, field_names[3], HeroName);
+        output.WriteString(3, field_names[4], HeroName);
       }
       if (hasGbidClass) {
-        output.WriteSFixed32(4, field_names[1], GbidClass);
+        output.WriteSFixed32(4, field_names[2], GbidClass);
       }
       if (hasLevel) {
-        output.WriteSInt32(5, field_names[12], Level);
+        output.WriteSInt32(5, field_names[13], Level);
       }
       if (hasPlayerFlags) {
-        output.WriteUInt32(6, field_names[13], PlayerFlags);
+        output.WriteUInt32(6, field_names[14], PlayerFlags);
       }
       if (hasVisualEquipment) {
-        output.WriteMessage(7, field_names[17], VisualEquipment);
+        output.WriteMessage(7, field_names[18], VisualEquipment);
       }
       if (questHistory_.Count > 0) {
-        output.WriteMessageArray(8, field_names[14], questHistory_);
+        output.WriteMessageArray(8, field_names[15], questHistory_);
       }
       if (hasLastPlayedAct) {
-        output.WriteSInt32(10, field_names[7], LastPlayedAct);
+        output.WriteSInt32(9, field_names[8], LastPlayedAct);
       }
       if (hasHighestUnlockedAct) {
-        output.WriteSInt32(11, field_names[5], HighestUnlockedAct);
+        output.WriteSInt32(10, field_names[6], HighestUnlockedAct);
       }
       if (hasLastPlayedDifficulty) {
-        output.WriteSInt32(12, field_names[8], LastPlayedDifficulty);
+        output.WriteSInt32(11, field_names[9], LastPlayedDifficulty);
       }
       if (hasHighestUnlockedDifficulty) {
-        output.WriteSInt32(13, field_names[6], HighestUnlockedDifficulty);
+        output.WriteSInt32(12, field_names[7], HighestUnlockedDifficulty);
       }
       if (hasLastPlayedQuest) {
-        output.WriteSFixed32(14, field_names[9], LastPlayedQuest);
+        output.WriteSFixed32(13, field_names[10], LastPlayedQuest);
       }
       if (hasLastPlayedQuestStep) {
-        output.WriteSInt32(15, field_names[10], LastPlayedQuestStep);
+        output.WriteSInt32(14, field_names[11], LastPlayedQuestStep);
       }
       if (hasTimePlayed) {
-        output.WriteUInt32(16, field_names[15], TimePlayed);
+        output.WriteUInt32(15, field_names[16], TimePlayed);
       }
       if (hasHighestCompletedDifficulty) {
-        output.WriteSInt32(17, field_names[4], HighestCompletedDifficulty);
+        output.WriteSInt32(16, field_names[5], HighestCompletedDifficulty);
       }
       if (hasCreateTime) {
-        output.WriteUInt32(18, field_names[0], CreateTime);
+        output.WriteUInt32(17, field_names[0], CreateTime);
       }
       if (hasLastPlayedTime) {
-        output.WriteUInt32(19, field_names[11], LastPlayedTime);
+        output.WriteUInt32(18, field_names[12], LastPlayedTime);
+      }
+      if (hasDeleteTime) {
+        output.WriteUInt32(19, field_names[1], DeleteTime);
       }
       UnknownFields.WriteTo(output);
     }
@@ -1981,34 +1996,37 @@ namespace D3.Hero {
           size += pb::CodedOutputStream.ComputeMessageSize(8, element);
         }
         if (hasLastPlayedAct) {
-          size += pb::CodedOutputStream.ComputeSInt32Size(10, LastPlayedAct);
+          size += pb::CodedOutputStream.ComputeSInt32Size(9, LastPlayedAct);
         }
         if (hasHighestUnlockedAct) {
-          size += pb::CodedOutputStream.ComputeSInt32Size(11, HighestUnlockedAct);
+          size += pb::CodedOutputStream.ComputeSInt32Size(10, HighestUnlockedAct);
         }
         if (hasLastPlayedDifficulty) {
-          size += pb::CodedOutputStream.ComputeSInt32Size(12, LastPlayedDifficulty);
+          size += pb::CodedOutputStream.ComputeSInt32Size(11, LastPlayedDifficulty);
         }
         if (hasHighestUnlockedDifficulty) {
-          size += pb::CodedOutputStream.ComputeSInt32Size(13, HighestUnlockedDifficulty);
+          size += pb::CodedOutputStream.ComputeSInt32Size(12, HighestUnlockedDifficulty);
         }
         if (hasLastPlayedQuest) {
-          size += pb::CodedOutputStream.ComputeSFixed32Size(14, LastPlayedQuest);
+          size += pb::CodedOutputStream.ComputeSFixed32Size(13, LastPlayedQuest);
         }
         if (hasLastPlayedQuestStep) {
-          size += pb::CodedOutputStream.ComputeSInt32Size(15, LastPlayedQuestStep);
+          size += pb::CodedOutputStream.ComputeSInt32Size(14, LastPlayedQuestStep);
         }
         if (hasTimePlayed) {
-          size += pb::CodedOutputStream.ComputeUInt32Size(16, TimePlayed);
+          size += pb::CodedOutputStream.ComputeUInt32Size(15, TimePlayed);
         }
         if (hasHighestCompletedDifficulty) {
-          size += pb::CodedOutputStream.ComputeSInt32Size(17, HighestCompletedDifficulty);
+          size += pb::CodedOutputStream.ComputeSInt32Size(16, HighestCompletedDifficulty);
         }
         if (hasCreateTime) {
-          size += pb::CodedOutputStream.ComputeUInt32Size(18, CreateTime);
+          size += pb::CodedOutputStream.ComputeUInt32Size(17, CreateTime);
         }
         if (hasLastPlayedTime) {
-          size += pb::CodedOutputStream.ComputeUInt32Size(19, LastPlayedTime);
+          size += pb::CodedOutputStream.ComputeUInt32Size(18, LastPlayedTime);
+        }
+        if (hasDeleteTime) {
+          size += pb::CodedOutputStream.ComputeUInt32Size(19, DeleteTime);
         }
         size += UnknownFields.SerializedSize;
         memoizedSerializedSize = size;
@@ -2191,6 +2209,9 @@ namespace D3.Hero {
         if (other.HasLastPlayedTime) {
           LastPlayedTime = other.LastPlayedTime;
         }
+        if (other.HasDeleteTime) {
+          DeleteTime = other.DeleteTime;
+        }
         this.MergeUnknownFields(other.UnknownFields);
         return this;
       }
@@ -2276,44 +2297,48 @@ namespace D3.Hero {
               input.ReadMessageArray(tag, field_name, result.questHistory_, global::D3.Hero.QuestHistoryEntry.DefaultInstance, extensionRegistry);
               break;
             }
-            case 80: {
+            case 72: {
               result.hasLastPlayedAct = input.ReadSInt32(ref result.lastPlayedAct_);
               break;
             }
-            case 88: {
+            case 80: {
               result.hasHighestUnlockedAct = input.ReadSInt32(ref result.highestUnlockedAct_);
               break;
             }
-            case 96: {
+            case 88: {
               result.hasLastPlayedDifficulty = input.ReadSInt32(ref result.lastPlayedDifficulty_);
               break;
             }
-            case 104: {
+            case 96: {
               result.hasHighestUnlockedDifficulty = input.ReadSInt32(ref result.highestUnlockedDifficulty_);
               break;
             }
-            case 117: {
+            case 109: {
               result.hasLastPlayedQuest = input.ReadSFixed32(ref result.lastPlayedQuest_);
               break;
             }
-            case 120: {
+            case 112: {
               result.hasLastPlayedQuestStep = input.ReadSInt32(ref result.lastPlayedQuestStep_);
               break;
             }
-            case 128: {
+            case 120: {
               result.hasTimePlayed = input.ReadUInt32(ref result.timePlayed_);
               break;
             }
-            case 136: {
+            case 128: {
               result.hasHighestCompletedDifficulty = input.ReadSInt32(ref result.highestCompletedDifficulty_);
               break;
             }
-            case 144: {
+            case 136: {
               result.hasCreateTime = input.ReadUInt32(ref result.createTime_);
               break;
             }
-            case 152: {
+            case 144: {
               result.hasLastPlayedTime = input.ReadUInt32(ref result.lastPlayedTime_);
+              break;
+            }
+            case 152: {
+              result.hasDeleteTime = input.ReadUInt32(ref result.deleteTime_);
               break;
             }
           }
@@ -2750,6 +2775,26 @@ namespace D3.Hero {
         result.lastPlayedTime_ = 0;
         return this;
       }
+      
+      public bool HasDeleteTime {
+        get { return result.hasDeleteTime; }
+      }
+      public uint DeleteTime {
+        get { return result.DeleteTime; }
+        set { SetDeleteTime(value); }
+      }
+      public Builder SetDeleteTime(uint value) {
+        PrepareBuilder();
+        result.hasDeleteTime = true;
+        result.deleteTime_ = value;
+        return this;
+      }
+      public Builder ClearDeleteTime() {
+        PrepareBuilder();
+        result.hasDeleteTime = false;
+        result.deleteTime_ = 0;
+        return this;
+      }
     }
     static Digest() {
       object.ReferenceEquals(global::D3.Hero.Hero.Descriptor, null);
@@ -2762,8 +2807,8 @@ namespace D3.Hero {
   public sealed partial class DigestUI : pb::GeneratedMessage<DigestUI, DigestUI.Builder> {
     private DigestUI() { }
     private static readonly DigestUI defaultInstance = new DigestUI().MakeReadOnly();
-    private static readonly string[] _digestUIFieldNames = new string[] { "highest_unlocked_act", "highest_unlocked_difficulty", "last_played_act", "last_played_difficulty", "last_played_quest", "last_played_quest_step", "time_played" };
-    private static readonly uint[] _digestUIFieldTags = new uint[] { 16, 32, 8, 24, 45, 48, 56 };
+    private static readonly string[] _digestUIFieldNames = new string[] { "highest_completed_difficulty", "highest_unlocked_act", "highest_unlocked_difficulty", "last_played_act", "last_played_difficulty", "last_played_quest", "last_played_quest_step", "time_played" };
+    private static readonly uint[] _digestUIFieldTags = new uint[] { 64, 16, 32, 8, 24, 45, 48, 56 };
     public static DigestUI DefaultInstance {
       get { return defaultInstance; }
     }
@@ -2854,6 +2899,16 @@ namespace D3.Hero {
       get { return timePlayed_; }
     }
     
+    public const int HighestCompletedDifficultyFieldNumber = 8;
+    private bool hasHighestCompletedDifficulty;
+    private int highestCompletedDifficulty_;
+    public bool HasHighestCompletedDifficulty {
+      get { return hasHighestCompletedDifficulty; }
+    }
+    public int HighestCompletedDifficulty {
+      get { return highestCompletedDifficulty_; }
+    }
+    
     public override bool IsInitialized {
       get {
         if (!hasLastPlayedAct) return false;
@@ -2871,25 +2926,28 @@ namespace D3.Hero {
       int size = SerializedSize;
       string[] field_names = _digestUIFieldNames;
       if (hasLastPlayedAct) {
-        output.WriteSInt32(1, field_names[2], LastPlayedAct);
+        output.WriteSInt32(1, field_names[3], LastPlayedAct);
       }
       if (hasHighestUnlockedAct) {
-        output.WriteSInt32(2, field_names[0], HighestUnlockedAct);
+        output.WriteSInt32(2, field_names[1], HighestUnlockedAct);
       }
       if (hasLastPlayedDifficulty) {
-        output.WriteSInt32(3, field_names[3], LastPlayedDifficulty);
+        output.WriteSInt32(3, field_names[4], LastPlayedDifficulty);
       }
       if (hasHighestUnlockedDifficulty) {
-        output.WriteSInt32(4, field_names[1], HighestUnlockedDifficulty);
+        output.WriteSInt32(4, field_names[2], HighestUnlockedDifficulty);
       }
       if (hasLastPlayedQuest) {
-        output.WriteSFixed32(5, field_names[4], LastPlayedQuest);
+        output.WriteSFixed32(5, field_names[5], LastPlayedQuest);
       }
       if (hasLastPlayedQuestStep) {
-        output.WriteSInt32(6, field_names[5], LastPlayedQuestStep);
+        output.WriteSInt32(6, field_names[6], LastPlayedQuestStep);
       }
       if (hasTimePlayed) {
-        output.WriteUInt32(7, field_names[6], TimePlayed);
+        output.WriteUInt32(7, field_names[7], TimePlayed);
+      }
+      if (hasHighestCompletedDifficulty) {
+        output.WriteSInt32(8, field_names[0], HighestCompletedDifficulty);
       }
       UnknownFields.WriteTo(output);
     }
@@ -2921,6 +2979,9 @@ namespace D3.Hero {
         }
         if (hasTimePlayed) {
           size += pb::CodedOutputStream.ComputeUInt32Size(7, TimePlayed);
+        }
+        if (hasHighestCompletedDifficulty) {
+          size += pb::CodedOutputStream.ComputeSInt32Size(8, HighestCompletedDifficulty);
         }
         size += UnknownFields.SerializedSize;
         memoizedSerializedSize = size;
@@ -3069,6 +3130,9 @@ namespace D3.Hero {
         if (other.HasTimePlayed) {
           TimePlayed = other.TimePlayed;
         }
+        if (other.HasHighestCompletedDifficulty) {
+          HighestCompletedDifficulty = other.HighestCompletedDifficulty;
+        }
         this.MergeUnknownFields(other.UnknownFields);
         return this;
       }
@@ -3138,6 +3202,10 @@ namespace D3.Hero {
             }
             case 56: {
               result.hasTimePlayed = input.ReadUInt32(ref result.timePlayed_);
+              break;
+            }
+            case 64: {
+              result.hasHighestCompletedDifficulty = input.ReadSInt32(ref result.highestCompletedDifficulty_);
               break;
             }
           }
@@ -3287,6 +3355,26 @@ namespace D3.Hero {
         PrepareBuilder();
         result.hasTimePlayed = false;
         result.timePlayed_ = 0;
+        return this;
+      }
+      
+      public bool HasHighestCompletedDifficulty {
+        get { return result.hasHighestCompletedDifficulty; }
+      }
+      public int HighestCompletedDifficulty {
+        get { return result.HighestCompletedDifficulty; }
+        set { SetHighestCompletedDifficulty(value); }
+      }
+      public Builder SetHighestCompletedDifficulty(int value) {
+        PrepareBuilder();
+        result.hasHighestCompletedDifficulty = true;
+        result.highestCompletedDifficulty_ = value;
+        return this;
+      }
+      public Builder ClearHighestCompletedDifficulty() {
+        PrepareBuilder();
+        result.hasHighestCompletedDifficulty = false;
+        result.highestCompletedDifficulty_ = 0;
         return this;
       }
     }
@@ -5104,8 +5192,8 @@ namespace D3.Hero {
   public sealed partial class SavedData : pb::GeneratedMessage<SavedData, SavedData.Builder> {
     private SavedData() { }
     private static readonly SavedData defaultInstance = new SavedData().MakeReadOnly();
-    private static readonly string[] _savedDataFieldNames = new string[] { "activated_waypoints", "active_skills", "gbid_potion_button", "hireling_saved_data", "last_level_time", "learned_lore", "save_point", "saved_conversations", "skill_slot_ever_assigned", "sno_traits", "time_played" };
-    private static readonly uint[] _savedDataFieldTags = new uint[] { 32, 114, 109, 42, 48, 58, 98, 66, 122, 85, 24 };
+    private static readonly string[] _savedDataFieldNames = new string[] { "activated_waypoints", "active_skills", "gbid_potion_button", "hireling_saved_data", "last_level_time", "learned_lore", "save_point", "saved_conversations", "skill_slot_ever_assigned", "skill_version", "sno_traits", "time_played" };
+    private static readonly uint[] _savedDataFieldTags = new uint[] { 16, 82, 77, 26, 32, 42, 66, 50, 90, 96, 61, 8 };
     public static SavedData DefaultInstance {
       get { return defaultInstance; }
     }
@@ -5126,7 +5214,7 @@ namespace D3.Hero {
       get { return global::D3.Hero.Hero.internal__static_D3_Hero_SavedData__FieldAccessorTable; }
     }
     
-    public const int TimePlayedFieldNumber = 3;
+    public const int TimePlayedFieldNumber = 1;
     private bool hasTimePlayed;
     private uint timePlayed_;
     public bool HasTimePlayed {
@@ -5136,7 +5224,7 @@ namespace D3.Hero {
       get { return timePlayed_; }
     }
     
-    public const int ActivatedWaypointsFieldNumber = 4;
+    public const int ActivatedWaypointsFieldNumber = 2;
     private bool hasActivatedWaypoints;
     private uint activatedWaypoints_;
     public bool HasActivatedWaypoints {
@@ -5146,7 +5234,7 @@ namespace D3.Hero {
       get { return activatedWaypoints_; }
     }
     
-    public const int HirelingSavedDataFieldNumber = 5;
+    public const int HirelingSavedDataFieldNumber = 3;
     private bool hasHirelingSavedData;
     private global::D3.Hireling.SavedData hirelingSavedData_;
     public bool HasHirelingSavedData {
@@ -5156,7 +5244,7 @@ namespace D3.Hero {
       get { return hirelingSavedData_ ?? global::D3.Hireling.SavedData.DefaultInstance; }
     }
     
-    public const int LastLevelTimeFieldNumber = 6;
+    public const int LastLevelTimeFieldNumber = 4;
     private bool hasLastLevelTime;
     private uint lastLevelTime_;
     public bool HasLastLevelTime {
@@ -5166,7 +5254,7 @@ namespace D3.Hero {
       get { return lastLevelTime_; }
     }
     
-    public const int LearnedLoreFieldNumber = 7;
+    public const int LearnedLoreFieldNumber = 5;
     private bool hasLearnedLore;
     private global::D3.Hero.LearnedLore learnedLore_;
     public bool HasLearnedLore {
@@ -5176,7 +5264,7 @@ namespace D3.Hero {
       get { return learnedLore_ ?? global::D3.Hero.LearnedLore.DefaultInstance; }
     }
     
-    public const int SavedConversationsFieldNumber = 8;
+    public const int SavedConversationsFieldNumber = 6;
     private bool hasSavedConversations;
     private global::D3.Hero.SavedConversations savedConversations_;
     public bool HasSavedConversations {
@@ -5186,7 +5274,7 @@ namespace D3.Hero {
       get { return savedConversations_ ?? global::D3.Hero.SavedConversations.DefaultInstance; }
     }
     
-    public const int SnoTraitsFieldNumber = 10;
+    public const int SnoTraitsFieldNumber = 7;
     private pbc::PopsicleList<int> snoTraits_ = new pbc::PopsicleList<int>();
     public scg::IList<int> SnoTraitsList {
       get { return pbc::Lists.AsReadOnly(snoTraits_); }
@@ -5198,7 +5286,7 @@ namespace D3.Hero {
       return snoTraits_[index];
     }
     
-    public const int SavePointFieldNumber = 12;
+    public const int SavePointFieldNumber = 8;
     private bool hasSavePoint;
     private global::D3.Hero.SavePointData_Proto savePoint_;
     public bool HasSavePoint {
@@ -5208,7 +5296,7 @@ namespace D3.Hero {
       get { return savePoint_ ?? global::D3.Hero.SavePointData_Proto.DefaultInstance; }
     }
     
-    public const int GbidPotionButtonFieldNumber = 13;
+    public const int GbidPotionButtonFieldNumber = 9;
     private bool hasGbidPotionButton;
     private int gbidPotionButton_ = -1;
     public bool HasGbidPotionButton {
@@ -5218,7 +5306,7 @@ namespace D3.Hero {
       get { return gbidPotionButton_; }
     }
     
-    public const int ActiveSkillsFieldNumber = 14;
+    public const int ActiveSkillsFieldNumber = 10;
     private pbc::PopsicleList<global::D3.Hero.SkillWithRune> activeSkills_ = new pbc::PopsicleList<global::D3.Hero.SkillWithRune>();
     public scg::IList<global::D3.Hero.SkillWithRune> ActiveSkillsList {
       get { return activeSkills_; }
@@ -5230,7 +5318,7 @@ namespace D3.Hero {
       return activeSkills_[index];
     }
     
-    public const int SkillSlotEverAssignedFieldNumber = 15;
+    public const int SkillSlotEverAssignedFieldNumber = 11;
     private bool hasSkillSlotEverAssigned;
     private pb::ByteString skillSlotEverAssigned_ = pb::ByteString.Empty;
     public bool HasSkillSlotEverAssigned {
@@ -5238,6 +5326,16 @@ namespace D3.Hero {
     }
     public pb::ByteString SkillSlotEverAssigned {
       get { return skillSlotEverAssigned_; }
+    }
+    
+    public const int SkillVersionFieldNumber = 12;
+    private bool hasSkillVersion;
+    private uint skillVersion_;
+    public bool HasSkillVersion {
+      get { return hasSkillVersion; }
+    }
+    public uint SkillVersion {
+      get { return skillVersion_; }
     }
     
     public override bool IsInitialized {
@@ -5251,6 +5349,7 @@ namespace D3.Hero {
         if (!hasSavePoint) return false;
         if (!hasGbidPotionButton) return false;
         if (!hasSkillSlotEverAssigned) return false;
+        if (!hasSkillVersion) return false;
         if (!HirelingSavedData.IsInitialized) return false;
         if (!SavedConversations.IsInitialized) return false;
         if (!SavePoint.IsInitialized) return false;
@@ -5265,37 +5364,40 @@ namespace D3.Hero {
       int size = SerializedSize;
       string[] field_names = _savedDataFieldNames;
       if (hasTimePlayed) {
-        output.WriteUInt32(3, field_names[10], TimePlayed);
+        output.WriteUInt32(1, field_names[11], TimePlayed);
       }
       if (hasActivatedWaypoints) {
-        output.WriteUInt32(4, field_names[0], ActivatedWaypoints);
+        output.WriteUInt32(2, field_names[0], ActivatedWaypoints);
       }
       if (hasHirelingSavedData) {
-        output.WriteMessage(5, field_names[3], HirelingSavedData);
+        output.WriteMessage(3, field_names[3], HirelingSavedData);
       }
       if (hasLastLevelTime) {
-        output.WriteUInt32(6, field_names[4], LastLevelTime);
+        output.WriteUInt32(4, field_names[4], LastLevelTime);
       }
       if (hasLearnedLore) {
-        output.WriteMessage(7, field_names[5], LearnedLore);
+        output.WriteMessage(5, field_names[5], LearnedLore);
       }
       if (hasSavedConversations) {
-        output.WriteMessage(8, field_names[7], SavedConversations);
+        output.WriteMessage(6, field_names[7], SavedConversations);
       }
       if (snoTraits_.Count > 0) {
-        output.WriteSFixed32Array(10, field_names[9], snoTraits_);
+        output.WriteSFixed32Array(7, field_names[10], snoTraits_);
       }
       if (hasSavePoint) {
-        output.WriteMessage(12, field_names[6], SavePoint);
+        output.WriteMessage(8, field_names[6], SavePoint);
       }
       if (hasGbidPotionButton) {
-        output.WriteSFixed32(13, field_names[2], GbidPotionButton);
+        output.WriteSFixed32(9, field_names[2], GbidPotionButton);
       }
       if (activeSkills_.Count > 0) {
-        output.WriteMessageArray(14, field_names[1], activeSkills_);
+        output.WriteMessageArray(10, field_names[1], activeSkills_);
       }
       if (hasSkillSlotEverAssigned) {
-        output.WriteBytes(15, field_names[8], SkillSlotEverAssigned);
+        output.WriteBytes(11, field_names[8], SkillSlotEverAssigned);
+      }
+      if (hasSkillVersion) {
+        output.WriteUInt32(12, field_names[9], SkillVersion);
       }
       UnknownFields.WriteTo(output);
     }
@@ -5308,22 +5410,22 @@ namespace D3.Hero {
         
         size = 0;
         if (hasTimePlayed) {
-          size += pb::CodedOutputStream.ComputeUInt32Size(3, TimePlayed);
+          size += pb::CodedOutputStream.ComputeUInt32Size(1, TimePlayed);
         }
         if (hasActivatedWaypoints) {
-          size += pb::CodedOutputStream.ComputeUInt32Size(4, ActivatedWaypoints);
+          size += pb::CodedOutputStream.ComputeUInt32Size(2, ActivatedWaypoints);
         }
         if (hasHirelingSavedData) {
-          size += pb::CodedOutputStream.ComputeMessageSize(5, HirelingSavedData);
+          size += pb::CodedOutputStream.ComputeMessageSize(3, HirelingSavedData);
         }
         if (hasLastLevelTime) {
-          size += pb::CodedOutputStream.ComputeUInt32Size(6, LastLevelTime);
+          size += pb::CodedOutputStream.ComputeUInt32Size(4, LastLevelTime);
         }
         if (hasLearnedLore) {
-          size += pb::CodedOutputStream.ComputeMessageSize(7, LearnedLore);
+          size += pb::CodedOutputStream.ComputeMessageSize(5, LearnedLore);
         }
         if (hasSavedConversations) {
-          size += pb::CodedOutputStream.ComputeMessageSize(8, SavedConversations);
+          size += pb::CodedOutputStream.ComputeMessageSize(6, SavedConversations);
         }
         {
           int dataSize = 0;
@@ -5332,16 +5434,19 @@ namespace D3.Hero {
           size += 1 * snoTraits_.Count;
         }
         if (hasSavePoint) {
-          size += pb::CodedOutputStream.ComputeMessageSize(12, SavePoint);
+          size += pb::CodedOutputStream.ComputeMessageSize(8, SavePoint);
         }
         if (hasGbidPotionButton) {
-          size += pb::CodedOutputStream.ComputeSFixed32Size(13, GbidPotionButton);
+          size += pb::CodedOutputStream.ComputeSFixed32Size(9, GbidPotionButton);
         }
         foreach (global::D3.Hero.SkillWithRune element in ActiveSkillsList) {
-          size += pb::CodedOutputStream.ComputeMessageSize(14, element);
+          size += pb::CodedOutputStream.ComputeMessageSize(10, element);
         }
         if (hasSkillSlotEverAssigned) {
-          size += pb::CodedOutputStream.ComputeBytesSize(15, SkillSlotEverAssigned);
+          size += pb::CodedOutputStream.ComputeBytesSize(11, SkillSlotEverAssigned);
+        }
+        if (hasSkillVersion) {
+          size += pb::CodedOutputStream.ComputeUInt32Size(12, SkillVersion);
         }
         size += UnknownFields.SerializedSize;
         memoizedSerializedSize = size;
@@ -5504,6 +5609,9 @@ namespace D3.Hero {
         if (other.HasSkillSlotEverAssigned) {
           SkillSlotEverAssigned = other.SkillSlotEverAssigned;
         }
+        if (other.HasSkillVersion) {
+          SkillVersion = other.SkillVersion;
+        }
         this.MergeUnknownFields(other.UnknownFields);
         return this;
       }
@@ -5547,15 +5655,15 @@ namespace D3.Hero {
               ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
               break;
             }
-            case 24: {
+            case 8: {
               result.hasTimePlayed = input.ReadUInt32(ref result.timePlayed_);
               break;
             }
-            case 32: {
+            case 16: {
               result.hasActivatedWaypoints = input.ReadUInt32(ref result.activatedWaypoints_);
               break;
             }
-            case 42: {
+            case 26: {
               global::D3.Hireling.SavedData.Builder subBuilder = global::D3.Hireling.SavedData.CreateBuilder();
               if (result.hasHirelingSavedData) {
                 subBuilder.MergeFrom(HirelingSavedData);
@@ -5564,11 +5672,11 @@ namespace D3.Hero {
               HirelingSavedData = subBuilder.BuildPartial();
               break;
             }
-            case 48: {
+            case 32: {
               result.hasLastLevelTime = input.ReadUInt32(ref result.lastLevelTime_);
               break;
             }
-            case 58: {
+            case 42: {
               global::D3.Hero.LearnedLore.Builder subBuilder = global::D3.Hero.LearnedLore.CreateBuilder();
               if (result.hasLearnedLore) {
                 subBuilder.MergeFrom(LearnedLore);
@@ -5577,7 +5685,7 @@ namespace D3.Hero {
               LearnedLore = subBuilder.BuildPartial();
               break;
             }
-            case 66: {
+            case 50: {
               global::D3.Hero.SavedConversations.Builder subBuilder = global::D3.Hero.SavedConversations.CreateBuilder();
               if (result.hasSavedConversations) {
                 subBuilder.MergeFrom(SavedConversations);
@@ -5586,12 +5694,12 @@ namespace D3.Hero {
               SavedConversations = subBuilder.BuildPartial();
               break;
             }
-            case 82:
-            case 85: {
+            case 58:
+            case 61: {
               input.ReadSFixed32Array(tag, field_name, result.snoTraits_);
               break;
             }
-            case 98: {
+            case 66: {
               global::D3.Hero.SavePointData_Proto.Builder subBuilder = global::D3.Hero.SavePointData_Proto.CreateBuilder();
               if (result.hasSavePoint) {
                 subBuilder.MergeFrom(SavePoint);
@@ -5600,16 +5708,20 @@ namespace D3.Hero {
               SavePoint = subBuilder.BuildPartial();
               break;
             }
-            case 109: {
+            case 77: {
               result.hasGbidPotionButton = input.ReadSFixed32(ref result.gbidPotionButton_);
               break;
             }
-            case 114: {
+            case 82: {
               input.ReadMessageArray(tag, field_name, result.activeSkills_, global::D3.Hero.SkillWithRune.DefaultInstance, extensionRegistry);
               break;
             }
-            case 122: {
+            case 90: {
               result.hasSkillSlotEverAssigned = input.ReadBytes(ref result.skillSlotEverAssigned_);
+              break;
+            }
+            case 96: {
+              result.hasSkillVersion = input.ReadUInt32(ref result.skillVersion_);
               break;
             }
           }
@@ -5954,6 +6066,26 @@ namespace D3.Hero {
         PrepareBuilder();
         result.hasSkillSlotEverAssigned = false;
         result.skillSlotEverAssigned_ = pb::ByteString.Empty;
+        return this;
+      }
+      
+      public bool HasSkillVersion {
+        get { return result.hasSkillVersion; }
+      }
+      public uint SkillVersion {
+        get { return result.SkillVersion; }
+        set { SetSkillVersion(value); }
+      }
+      public Builder SetSkillVersion(uint value) {
+        PrepareBuilder();
+        result.hasSkillVersion = true;
+        result.skillVersion_ = value;
+        return this;
+      }
+      public Builder ClearSkillVersion() {
+        PrepareBuilder();
+        result.hasSkillVersion = false;
+        result.skillVersion_ = 0;
         return this;
       }
     }
@@ -7874,7 +8006,7 @@ namespace D3.Hero {
   public sealed partial class QuestHistoryList : pb::GeneratedMessage<QuestHistoryList, QuestHistoryList.Builder> {
     private QuestHistoryList() { }
     private static readonly QuestHistoryList defaultInstance = new QuestHistoryList().MakeReadOnly();
-    private static readonly string[] _questHistoryListFieldNames = new string[] { "quest_history" };
+    private static readonly string[] _questHistoryListFieldNames = new string[] { "history" };
     private static readonly uint[] _questHistoryListFieldTags = new uint[] { 10 };
     public static QuestHistoryList DefaultInstance {
       get { return defaultInstance; }
@@ -7896,21 +8028,21 @@ namespace D3.Hero {
       get { return global::D3.Hero.Hero.internal__static_D3_Hero_QuestHistoryList__FieldAccessorTable; }
     }
     
-    public const int QuestHistoryFieldNumber = 1;
-    private pbc::PopsicleList<global::D3.Hero.QuestHistoryEntry> questHistory_ = new pbc::PopsicleList<global::D3.Hero.QuestHistoryEntry>();
-    public scg::IList<global::D3.Hero.QuestHistoryEntry> QuestHistoryPropList {
-      get { return questHistory_; }
+    public const int HistoryFieldNumber = 1;
+    private pbc::PopsicleList<global::D3.Hero.QuestHistoryEntry> history_ = new pbc::PopsicleList<global::D3.Hero.QuestHistoryEntry>();
+    public scg::IList<global::D3.Hero.QuestHistoryEntry> HistoryList {
+      get { return history_; }
     }
-    public int QuestHistoryCount {
-      get { return questHistory_.Count; }
+    public int HistoryCount {
+      get { return history_.Count; }
     }
-    public global::D3.Hero.QuestHistoryEntry GetQuestHistory(int index) {
-      return questHistory_[index];
+    public global::D3.Hero.QuestHistoryEntry GetHistory(int index) {
+      return history_[index];
     }
     
     public override bool IsInitialized {
       get {
-        foreach (global::D3.Hero.QuestHistoryEntry element in QuestHistoryPropList) {
+        foreach (global::D3.Hero.QuestHistoryEntry element in HistoryList) {
           if (!element.IsInitialized) return false;
         }
         return true;
@@ -7920,8 +8052,8 @@ namespace D3.Hero {
     public override void WriteTo(pb::ICodedOutputStream output) {
       int size = SerializedSize;
       string[] field_names = _questHistoryListFieldNames;
-      if (questHistory_.Count > 0) {
-        output.WriteMessageArray(1, field_names[0], questHistory_);
+      if (history_.Count > 0) {
+        output.WriteMessageArray(1, field_names[0], history_);
       }
       UnknownFields.WriteTo(output);
     }
@@ -7933,7 +8065,7 @@ namespace D3.Hero {
         if (size != -1) return size;
         
         size = 0;
-        foreach (global::D3.Hero.QuestHistoryEntry element in QuestHistoryPropList) {
+        foreach (global::D3.Hero.QuestHistoryEntry element in HistoryList) {
           size += pb::CodedOutputStream.ComputeMessageSize(1, element);
         }
         size += UnknownFields.SerializedSize;
@@ -7973,7 +8105,7 @@ namespace D3.Hero {
       return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
     }
     private QuestHistoryList MakeReadOnly() {
-      questHistory_.MakeReadOnly();
+      history_.MakeReadOnly();
       return this;
     }
     
@@ -8063,8 +8195,8 @@ namespace D3.Hero {
       public override Builder MergeFrom(QuestHistoryList other) {
         if (other == global::D3.Hero.QuestHistoryList.DefaultInstance) return this;
         PrepareBuilder();
-        if (other.questHistory_.Count != 0) {
-          result.questHistory_.Add(other.questHistory_);
+        if (other.history_.Count != 0) {
+          result.history_.Add(other.history_);
         }
         this.MergeUnknownFields(other.UnknownFields);
         return this;
@@ -8110,7 +8242,7 @@ namespace D3.Hero {
               break;
             }
             case 10: {
-              input.ReadMessageArray(tag, field_name, result.questHistory_, global::D3.Hero.QuestHistoryEntry.DefaultInstance, extensionRegistry);
+              input.ReadMessageArray(tag, field_name, result.history_, global::D3.Hero.QuestHistoryEntry.DefaultInstance, extensionRegistry);
               break;
             }
           }
@@ -8123,47 +8255,47 @@ namespace D3.Hero {
       }
       
       
-      public pbc::IPopsicleList<global::D3.Hero.QuestHistoryEntry> QuestHistoryList {
-        get { return PrepareBuilder().questHistory_; }
+      public pbc::IPopsicleList<global::D3.Hero.QuestHistoryEntry> HistoryList {
+        get { return PrepareBuilder().history_; }
       }
-      public int QuestHistoryCount {
-        get { return result.QuestHistoryCount; }
+      public int HistoryCount {
+        get { return result.HistoryCount; }
       }
-      public global::D3.Hero.QuestHistoryEntry GetQuestHistory(int index) {
-        return result.GetQuestHistory(index);
+      public global::D3.Hero.QuestHistoryEntry GetHistory(int index) {
+        return result.GetHistory(index);
       }
-      public Builder SetQuestHistory(int index, global::D3.Hero.QuestHistoryEntry value) {
+      public Builder SetHistory(int index, global::D3.Hero.QuestHistoryEntry value) {
         pb::ThrowHelper.ThrowIfNull(value, "value");
         PrepareBuilder();
-        result.questHistory_[index] = value;
+        result.history_[index] = value;
         return this;
       }
-      public Builder SetQuestHistory(int index, global::D3.Hero.QuestHistoryEntry.Builder builderForValue) {
+      public Builder SetHistory(int index, global::D3.Hero.QuestHistoryEntry.Builder builderForValue) {
         pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
         PrepareBuilder();
-        result.questHistory_[index] = builderForValue.Build();
+        result.history_[index] = builderForValue.Build();
         return this;
       }
-      public Builder AddQuestHistory(global::D3.Hero.QuestHistoryEntry value) {
+      public Builder AddHistory(global::D3.Hero.QuestHistoryEntry value) {
         pb::ThrowHelper.ThrowIfNull(value, "value");
         PrepareBuilder();
-        result.questHistory_.Add(value);
+        result.history_.Add(value);
         return this;
       }
-      public Builder AddQuestHistory(global::D3.Hero.QuestHistoryEntry.Builder builderForValue) {
+      public Builder AddHistory(global::D3.Hero.QuestHistoryEntry.Builder builderForValue) {
         pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
         PrepareBuilder();
-        result.questHistory_.Add(builderForValue.Build());
+        result.history_.Add(builderForValue.Build());
         return this;
       }
-      public Builder AddRangeQuestHistory(scg::IEnumerable<global::D3.Hero.QuestHistoryEntry> values) {
+      public Builder AddRangeHistory(scg::IEnumerable<global::D3.Hero.QuestHistoryEntry> values) {
         PrepareBuilder();
-        result.questHistory_.Add(values);
+        result.history_.Add(values);
         return this;
       }
-      public Builder ClearQuestHistory() {
+      public Builder ClearHistory() {
         PrepareBuilder();
-        result.questHistory_.Clear();
+        result.history_.Clear();
         return this;
       }
     }
@@ -8482,7 +8614,7 @@ namespace D3.Hero {
   public sealed partial class QuestRewardHistoryList : pb::GeneratedMessage<QuestRewardHistoryList, QuestRewardHistoryList.Builder> {
     private QuestRewardHistoryList() { }
     private static readonly QuestRewardHistoryList defaultInstance = new QuestRewardHistoryList().MakeReadOnly();
-    private static readonly string[] _questRewardHistoryListFieldNames = new string[] { "quest_reward_history" };
+    private static readonly string[] _questRewardHistoryListFieldNames = new string[] { "reward_history" };
     private static readonly uint[] _questRewardHistoryListFieldTags = new uint[] { 10 };
     public static QuestRewardHistoryList DefaultInstance {
       get { return defaultInstance; }
@@ -8504,21 +8636,21 @@ namespace D3.Hero {
       get { return global::D3.Hero.Hero.internal__static_D3_Hero_QuestRewardHistoryList__FieldAccessorTable; }
     }
     
-    public const int QuestRewardHistoryFieldNumber = 1;
-    private pbc::PopsicleList<global::D3.Hero.QuestRewardHistoryEntry> questRewardHistory_ = new pbc::PopsicleList<global::D3.Hero.QuestRewardHistoryEntry>();
-    public scg::IList<global::D3.Hero.QuestRewardHistoryEntry> QuestRewardHistoryPropList {
-      get { return questRewardHistory_; }
+    public const int RewardHistoryFieldNumber = 1;
+    private pbc::PopsicleList<global::D3.Hero.QuestRewardHistoryEntry> rewardHistory_ = new pbc::PopsicleList<global::D3.Hero.QuestRewardHistoryEntry>();
+    public scg::IList<global::D3.Hero.QuestRewardHistoryEntry> RewardHistoryList {
+      get { return rewardHistory_; }
     }
-    public int QuestRewardHistoryCount {
-      get { return questRewardHistory_.Count; }
+    public int RewardHistoryCount {
+      get { return rewardHistory_.Count; }
     }
-    public global::D3.Hero.QuestRewardHistoryEntry GetQuestRewardHistory(int index) {
-      return questRewardHistory_[index];
+    public global::D3.Hero.QuestRewardHistoryEntry GetRewardHistory(int index) {
+      return rewardHistory_[index];
     }
     
     public override bool IsInitialized {
       get {
-        foreach (global::D3.Hero.QuestRewardHistoryEntry element in QuestRewardHistoryPropList) {
+        foreach (global::D3.Hero.QuestRewardHistoryEntry element in RewardHistoryList) {
           if (!element.IsInitialized) return false;
         }
         return true;
@@ -8528,8 +8660,8 @@ namespace D3.Hero {
     public override void WriteTo(pb::ICodedOutputStream output) {
       int size = SerializedSize;
       string[] field_names = _questRewardHistoryListFieldNames;
-      if (questRewardHistory_.Count > 0) {
-        output.WriteMessageArray(1, field_names[0], questRewardHistory_);
+      if (rewardHistory_.Count > 0) {
+        output.WriteMessageArray(1, field_names[0], rewardHistory_);
       }
       UnknownFields.WriteTo(output);
     }
@@ -8541,7 +8673,7 @@ namespace D3.Hero {
         if (size != -1) return size;
         
         size = 0;
-        foreach (global::D3.Hero.QuestRewardHistoryEntry element in QuestRewardHistoryPropList) {
+        foreach (global::D3.Hero.QuestRewardHistoryEntry element in RewardHistoryList) {
           size += pb::CodedOutputStream.ComputeMessageSize(1, element);
         }
         size += UnknownFields.SerializedSize;
@@ -8581,7 +8713,7 @@ namespace D3.Hero {
       return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
     }
     private QuestRewardHistoryList MakeReadOnly() {
-      questRewardHistory_.MakeReadOnly();
+      rewardHistory_.MakeReadOnly();
       return this;
     }
     
@@ -8671,8 +8803,8 @@ namespace D3.Hero {
       public override Builder MergeFrom(QuestRewardHistoryList other) {
         if (other == global::D3.Hero.QuestRewardHistoryList.DefaultInstance) return this;
         PrepareBuilder();
-        if (other.questRewardHistory_.Count != 0) {
-          result.questRewardHistory_.Add(other.questRewardHistory_);
+        if (other.rewardHistory_.Count != 0) {
+          result.rewardHistory_.Add(other.rewardHistory_);
         }
         this.MergeUnknownFields(other.UnknownFields);
         return this;
@@ -8718,7 +8850,7 @@ namespace D3.Hero {
               break;
             }
             case 10: {
-              input.ReadMessageArray(tag, field_name, result.questRewardHistory_, global::D3.Hero.QuestRewardHistoryEntry.DefaultInstance, extensionRegistry);
+              input.ReadMessageArray(tag, field_name, result.rewardHistory_, global::D3.Hero.QuestRewardHistoryEntry.DefaultInstance, extensionRegistry);
               break;
             }
           }
@@ -8731,47 +8863,47 @@ namespace D3.Hero {
       }
       
       
-      public pbc::IPopsicleList<global::D3.Hero.QuestRewardHistoryEntry> QuestRewardHistoryList {
-        get { return PrepareBuilder().questRewardHistory_; }
+      public pbc::IPopsicleList<global::D3.Hero.QuestRewardHistoryEntry> RewardHistoryList {
+        get { return PrepareBuilder().rewardHistory_; }
       }
-      public int QuestRewardHistoryCount {
-        get { return result.QuestRewardHistoryCount; }
+      public int RewardHistoryCount {
+        get { return result.RewardHistoryCount; }
       }
-      public global::D3.Hero.QuestRewardHistoryEntry GetQuestRewardHistory(int index) {
-        return result.GetQuestRewardHistory(index);
+      public global::D3.Hero.QuestRewardHistoryEntry GetRewardHistory(int index) {
+        return result.GetRewardHistory(index);
       }
-      public Builder SetQuestRewardHistory(int index, global::D3.Hero.QuestRewardHistoryEntry value) {
+      public Builder SetRewardHistory(int index, global::D3.Hero.QuestRewardHistoryEntry value) {
         pb::ThrowHelper.ThrowIfNull(value, "value");
         PrepareBuilder();
-        result.questRewardHistory_[index] = value;
+        result.rewardHistory_[index] = value;
         return this;
       }
-      public Builder SetQuestRewardHistory(int index, global::D3.Hero.QuestRewardHistoryEntry.Builder builderForValue) {
+      public Builder SetRewardHistory(int index, global::D3.Hero.QuestRewardHistoryEntry.Builder builderForValue) {
         pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
         PrepareBuilder();
-        result.questRewardHistory_[index] = builderForValue.Build();
+        result.rewardHistory_[index] = builderForValue.Build();
         return this;
       }
-      public Builder AddQuestRewardHistory(global::D3.Hero.QuestRewardHistoryEntry value) {
+      public Builder AddRewardHistory(global::D3.Hero.QuestRewardHistoryEntry value) {
         pb::ThrowHelper.ThrowIfNull(value, "value");
         PrepareBuilder();
-        result.questRewardHistory_.Add(value);
+        result.rewardHistory_.Add(value);
         return this;
       }
-      public Builder AddQuestRewardHistory(global::D3.Hero.QuestRewardHistoryEntry.Builder builderForValue) {
+      public Builder AddRewardHistory(global::D3.Hero.QuestRewardHistoryEntry.Builder builderForValue) {
         pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
         PrepareBuilder();
-        result.questRewardHistory_.Add(builderForValue.Build());
+        result.rewardHistory_.Add(builderForValue.Build());
         return this;
       }
-      public Builder AddRangeQuestRewardHistory(scg::IEnumerable<global::D3.Hero.QuestRewardHistoryEntry> values) {
+      public Builder AddRangeRewardHistory(scg::IEnumerable<global::D3.Hero.QuestRewardHistoryEntry> values) {
         PrepareBuilder();
-        result.questRewardHistory_.Add(values);
+        result.rewardHistory_.Add(values);
         return this;
       }
-      public Builder ClearQuestRewardHistory() {
+      public Builder ClearRewardHistory() {
         PrepareBuilder();
-        result.questRewardHistory_.Clear();
+        result.rewardHistory_.Clear();
         return this;
       }
     }

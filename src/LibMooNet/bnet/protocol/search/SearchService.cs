@@ -28,6 +28,8 @@ namespace bnet.protocol.search {
       internal static pb::FieldAccess.FieldAccessorTable<global::bnet.protocol.search.SetObjectRequest, global::bnet.protocol.search.SetObjectRequest.Builder> internal__static_bnet_protocol_search_SetObjectRequest__FieldAccessorTable;
       internal static pbd::MessageDescriptor internal__static_bnet_protocol_search_RemoveObjectsRequest__Descriptor;
       internal static pb::FieldAccess.FieldAccessorTable<global::bnet.protocol.search.RemoveObjectsRequest, global::bnet.protocol.search.RemoveObjectsRequest.Builder> internal__static_bnet_protocol_search_RemoveObjectsRequest__FieldAccessorTable;
+      internal static pbd::MessageDescriptor internal__static_bnet_protocol_search_IndexBlacklistConfig__Descriptor;
+      internal static pb::FieldAccess.FieldAccessorTable<global::bnet.protocol.search.IndexBlacklistConfig, global::bnet.protocol.search.IndexBlacklistConfig.Builder> internal__static_bnet_protocol_search_IndexBlacklistConfig__FieldAccessorTable;
       internal static pbd::MessageDescriptor internal__static_bnet_protocol_search_SearchConfig__Descriptor;
       internal static pb::FieldAccess.FieldAccessorTable<global::bnet.protocol.search.SearchConfig, global::bnet.protocol.search.SearchConfig.Builder> internal__static_bnet_protocol_search_SearchConfig__FieldAccessorTable;
       internal static pbd::MessageDescriptor internal__static_bnet_protocol_search_SearchUniverseLicenseConfig__Descriptor;
@@ -47,24 +49,28 @@ namespace bnet.protocol.search {
             "YXJjaBoOYm5ldC9ycGMucHJvdG8aF2JuZXQvc2VhcmNoX3R5cGVzLnByb3Rv" + 
             "IoIBChJGaW5kTWF0Y2hlc1JlcXVlc3QSEAoIdW5pdmVyc2UYASACKAkSLQoH" + 
             "ZmlsdGVycxgCIAMoCzIcLmJuZXQucHJvdG9jb2wuc2VhcmNoLkZpbHRlchIZ" + 
-            "Cg5zdGFydGluZ19pbmRleBgDIAEoDToBMBIQCgVjb3VudBgEIAEoDToBMCJZ" + 
-            "ChNGaW5kTWF0Y2hlc1Jlc3BvbnNlEhMKC3RvdGFsX2NvdW50GAEgAigNEi0K" + 
-            "B29iamVjdHMYAiADKAsyHC5ibmV0LnByb3RvY29sLnNlYXJjaC5PYmplY3Qi" + 
-            "QQoQU2V0T2JqZWN0UmVxdWVzdBItCgdvYmplY3RzGAEgAygLMhwuYm5ldC5w" + 
-            "cm90b2NvbC5zZWFyY2guT2JqZWN0IjgKFFJlbW92ZU9iamVjdHNSZXF1ZXN0" + 
-            "EhAKCHN0YXJ0X2lkGAEgAigMEg4KBmVuZF9pZBgCIAIoDCIOCgxTZWFyY2hD" + 
-            "b25maWcidgobU2VhcmNoVW5pdmVyc2VMaWNlbnNlQ29uZmlnEhAKCHVuaXZl" + 
-            "cnNlGAEgAigJEiEKFnNlYXJjaF9lbmFibGVkX2xpY2Vuc2UYAiABKA06ATAS" + 
-            "IgoXc2VhcmNoX2Rpc2FibGVkX2xpY2Vuc2UYAyABKA06ATAiYwoTU2VhcmNo" + 
-            "TGljZW5zZUNvbmZpZxJMChF1bml2ZXJzZV9saWNlbnNlcxgBIAMoCzIxLmJu" + 
-            "ZXQucHJvdG9jb2wuc2VhcmNoLlNlYXJjaFVuaXZlcnNlTGljZW5zZUNvbmZp" + 
-            "ZzKvAgoNU2VhcmNoU2VydmljZRJoCgtGaW5kTWF0Y2hlcxIoLmJuZXQucHJv" + 
-            "dG9jb2wuc2VhcmNoLkZpbmRNYXRjaGVzUmVxdWVzdBopLmJuZXQucHJvdG9j" + 
-            "b2wuc2VhcmNoLkZpbmRNYXRjaGVzUmVzcG9uc2UiBIC1GAESVQoJU2V0T2Jq" + 
-            "ZWN0EiYuYm5ldC5wcm90b2NvbC5zZWFyY2guU2V0T2JqZWN0UmVxdWVzdBoa" + 
-            "LmJuZXQucHJvdG9jb2wuTk9fUkVTUE9OU0UiBIC1GAISXQoNUmVtb3ZlT2Jq" + 
-            "ZWN0cxIqLmJuZXQucHJvdG9jb2wuc2VhcmNoLlJlbW92ZU9iamVjdHNSZXF1" + 
-            "ZXN0GhouYm5ldC5wcm90b2NvbC5OT19SRVNQT05TRSIEgLUYA0IDgAEA");
+            "Cg5zdGFydGluZ19pbmRleBgDIAEoDToBMBIQCgVjb3VudBgEIAEoDToBMCJ+" + 
+            "ChNGaW5kTWF0Y2hlc1Jlc3BvbnNlEhoKEnRvdGFsX2NvdW50X2NhcHBlZBgB" + 
+            "IAIoDRItCgdvYmplY3RzGAIgAygLMhwuYm5ldC5wcm90b2NvbC5zZWFyY2gu" + 
+            "T2JqZWN0EhwKFHRvdGFsX2NvdW50X3VuY2FwcGVkGAMgASgNIkEKEFNldE9i" + 
+            "amVjdFJlcXVlc3QSLQoHb2JqZWN0cxgBIAMoCzIcLmJuZXQucHJvdG9jb2wu" + 
+            "c2VhcmNoLk9iamVjdCI4ChRSZW1vdmVPYmplY3RzUmVxdWVzdBIQCghzdGFy" + 
+            "dF9pZBgBIAIoDBIOCgZlbmRfaWQYAiACKAwiJQoUSW5kZXhCbGFja2xpc3RD" + 
+            "b25maWcSDQoFaW5kZXgYASADKAQiUwoMU2VhcmNoQ29uZmlnEkMKD2luZGV4" + 
+            "X2JsYWNrbGlzdBgBIAEoCzIqLmJuZXQucHJvdG9jb2wuc2VhcmNoLkluZGV4" + 
+            "QmxhY2tsaXN0Q29uZmlnInYKG1NlYXJjaFVuaXZlcnNlTGljZW5zZUNvbmZp" + 
+            "ZxIQCgh1bml2ZXJzZRgBIAIoCRIhChZzZWFyY2hfZW5hYmxlZF9saWNlbnNl" + 
+            "GAIgASgNOgEwEiIKF3NlYXJjaF9kaXNhYmxlZF9saWNlbnNlGAMgASgNOgEw" + 
+            "ImMKE1NlYXJjaExpY2Vuc2VDb25maWcSTAoRdW5pdmVyc2VfbGljZW5zZXMY" + 
+            "ASADKAsyMS5ibmV0LnByb3RvY29sLnNlYXJjaC5TZWFyY2hVbml2ZXJzZUxp" + 
+            "Y2Vuc2VDb25maWcyrwIKDVNlYXJjaFNlcnZpY2USaAoLRmluZE1hdGNoZXMS" + 
+            "KC5ibmV0LnByb3RvY29sLnNlYXJjaC5GaW5kTWF0Y2hlc1JlcXVlc3QaKS5i" + 
+            "bmV0LnByb3RvY29sLnNlYXJjaC5GaW5kTWF0Y2hlc1Jlc3BvbnNlIgSAtRgB" + 
+            "ElUKCVNldE9iamVjdBImLmJuZXQucHJvdG9jb2wuc2VhcmNoLlNldE9iamVj" + 
+            "dFJlcXVlc3QaGi5ibmV0LnByb3RvY29sLk5PX1JFU1BPTlNFIgSAtRgCEl0K" + 
+            "DVJlbW92ZU9iamVjdHMSKi5ibmV0LnByb3RvY29sLnNlYXJjaC5SZW1vdmVP" + 
+            "YmplY3RzUmVxdWVzdBoaLmJuZXQucHJvdG9jb2wuTk9fUkVTUE9OU0UiBIC1" + 
+            "GANCA4ABAA==");
         pbd::FileDescriptor.InternalDescriptorAssigner assigner = delegate(pbd::FileDescriptor root) {
           descriptor = root;
           internal__static_bnet_protocol_search_FindMatchesRequest__Descriptor = Descriptor.MessageTypes[0];
@@ -74,7 +80,7 @@ namespace bnet.protocol.search {
           internal__static_bnet_protocol_search_FindMatchesResponse__Descriptor = Descriptor.MessageTypes[1];
           internal__static_bnet_protocol_search_FindMatchesResponse__FieldAccessorTable = 
               new pb::FieldAccess.FieldAccessorTable<global::bnet.protocol.search.FindMatchesResponse, global::bnet.protocol.search.FindMatchesResponse.Builder>(internal__static_bnet_protocol_search_FindMatchesResponse__Descriptor,
-                  new string[] { "TotalCount", "Objects", });
+                  new string[] { "TotalCountCapped", "Objects", "TotalCountUncapped", });
           internal__static_bnet_protocol_search_SetObjectRequest__Descriptor = Descriptor.MessageTypes[2];
           internal__static_bnet_protocol_search_SetObjectRequest__FieldAccessorTable = 
               new pb::FieldAccess.FieldAccessorTable<global::bnet.protocol.search.SetObjectRequest, global::bnet.protocol.search.SetObjectRequest.Builder>(internal__static_bnet_protocol_search_SetObjectRequest__Descriptor,
@@ -83,15 +89,19 @@ namespace bnet.protocol.search {
           internal__static_bnet_protocol_search_RemoveObjectsRequest__FieldAccessorTable = 
               new pb::FieldAccess.FieldAccessorTable<global::bnet.protocol.search.RemoveObjectsRequest, global::bnet.protocol.search.RemoveObjectsRequest.Builder>(internal__static_bnet_protocol_search_RemoveObjectsRequest__Descriptor,
                   new string[] { "StartId", "EndId", });
-          internal__static_bnet_protocol_search_SearchConfig__Descriptor = Descriptor.MessageTypes[4];
+          internal__static_bnet_protocol_search_IndexBlacklistConfig__Descriptor = Descriptor.MessageTypes[4];
+          internal__static_bnet_protocol_search_IndexBlacklistConfig__FieldAccessorTable = 
+              new pb::FieldAccess.FieldAccessorTable<global::bnet.protocol.search.IndexBlacklistConfig, global::bnet.protocol.search.IndexBlacklistConfig.Builder>(internal__static_bnet_protocol_search_IndexBlacklistConfig__Descriptor,
+                  new string[] { "Index", });
+          internal__static_bnet_protocol_search_SearchConfig__Descriptor = Descriptor.MessageTypes[5];
           internal__static_bnet_protocol_search_SearchConfig__FieldAccessorTable = 
               new pb::FieldAccess.FieldAccessorTable<global::bnet.protocol.search.SearchConfig, global::bnet.protocol.search.SearchConfig.Builder>(internal__static_bnet_protocol_search_SearchConfig__Descriptor,
-                  new string[] { });
-          internal__static_bnet_protocol_search_SearchUniverseLicenseConfig__Descriptor = Descriptor.MessageTypes[5];
+                  new string[] { "IndexBlacklist", });
+          internal__static_bnet_protocol_search_SearchUniverseLicenseConfig__Descriptor = Descriptor.MessageTypes[6];
           internal__static_bnet_protocol_search_SearchUniverseLicenseConfig__FieldAccessorTable = 
               new pb::FieldAccess.FieldAccessorTable<global::bnet.protocol.search.SearchUniverseLicenseConfig, global::bnet.protocol.search.SearchUniverseLicenseConfig.Builder>(internal__static_bnet_protocol_search_SearchUniverseLicenseConfig__Descriptor,
                   new string[] { "Universe", "SearchEnabledLicense", "SearchDisabledLicense", });
-          internal__static_bnet_protocol_search_SearchLicenseConfig__Descriptor = Descriptor.MessageTypes[6];
+          internal__static_bnet_protocol_search_SearchLicenseConfig__Descriptor = Descriptor.MessageTypes[7];
           internal__static_bnet_protocol_search_SearchLicenseConfig__FieldAccessorTable = 
               new pb::FieldAccess.FieldAccessorTable<global::bnet.protocol.search.SearchLicenseConfig, global::bnet.protocol.search.SearchLicenseConfig.Builder>(internal__static_bnet_protocol_search_SearchLicenseConfig__Descriptor,
                   new string[] { "UniverseLicenses", });
@@ -553,8 +563,8 @@ namespace bnet.protocol.search {
   public sealed partial class FindMatchesResponse : pb::GeneratedMessage<FindMatchesResponse, FindMatchesResponse.Builder> {
     private FindMatchesResponse() { }
     private static readonly FindMatchesResponse defaultInstance = new FindMatchesResponse().MakeReadOnly();
-    private static readonly string[] _findMatchesResponseFieldNames = new string[] { "objects", "total_count" };
-    private static readonly uint[] _findMatchesResponseFieldTags = new uint[] { 18, 8 };
+    private static readonly string[] _findMatchesResponseFieldNames = new string[] { "objects", "total_count_capped", "total_count_uncapped" };
+    private static readonly uint[] _findMatchesResponseFieldTags = new uint[] { 18, 8, 24 };
     public static FindMatchesResponse DefaultInstance {
       get { return defaultInstance; }
     }
@@ -575,14 +585,14 @@ namespace bnet.protocol.search {
       get { return global::bnet.protocol.search.Proto.SearchService.internal__static_bnet_protocol_search_FindMatchesResponse__FieldAccessorTable; }
     }
     
-    public const int TotalCountFieldNumber = 1;
-    private bool hasTotalCount;
-    private uint totalCount_;
-    public bool HasTotalCount {
-      get { return hasTotalCount; }
+    public const int TotalCountCappedFieldNumber = 1;
+    private bool hasTotalCountCapped;
+    private uint totalCountCapped_;
+    public bool HasTotalCountCapped {
+      get { return hasTotalCountCapped; }
     }
-    public uint TotalCount {
-      get { return totalCount_; }
+    public uint TotalCountCapped {
+      get { return totalCountCapped_; }
     }
     
     public const int ObjectsFieldNumber = 2;
@@ -597,9 +607,19 @@ namespace bnet.protocol.search {
       return objects_[index];
     }
     
+    public const int TotalCountUncappedFieldNumber = 3;
+    private bool hasTotalCountUncapped;
+    private uint totalCountUncapped_;
+    public bool HasTotalCountUncapped {
+      get { return hasTotalCountUncapped; }
+    }
+    public uint TotalCountUncapped {
+      get { return totalCountUncapped_; }
+    }
+    
     public override bool IsInitialized {
       get {
-        if (!hasTotalCount) return false;
+        if (!hasTotalCountCapped) return false;
         foreach (global::bnet.protocol.search.Object element in ObjectsList) {
           if (!element.IsInitialized) return false;
         }
@@ -610,11 +630,14 @@ namespace bnet.protocol.search {
     public override void WriteTo(pb::ICodedOutputStream output) {
       int size = SerializedSize;
       string[] field_names = _findMatchesResponseFieldNames;
-      if (hasTotalCount) {
-        output.WriteUInt32(1, field_names[1], TotalCount);
+      if (hasTotalCountCapped) {
+        output.WriteUInt32(1, field_names[1], TotalCountCapped);
       }
       if (objects_.Count > 0) {
         output.WriteMessageArray(2, field_names[0], objects_);
+      }
+      if (hasTotalCountUncapped) {
+        output.WriteUInt32(3, field_names[2], TotalCountUncapped);
       }
       UnknownFields.WriteTo(output);
     }
@@ -626,11 +649,14 @@ namespace bnet.protocol.search {
         if (size != -1) return size;
         
         size = 0;
-        if (hasTotalCount) {
-          size += pb::CodedOutputStream.ComputeUInt32Size(1, TotalCount);
+        if (hasTotalCountCapped) {
+          size += pb::CodedOutputStream.ComputeUInt32Size(1, TotalCountCapped);
         }
         foreach (global::bnet.protocol.search.Object element in ObjectsList) {
           size += pb::CodedOutputStream.ComputeMessageSize(2, element);
+        }
+        if (hasTotalCountUncapped) {
+          size += pb::CodedOutputStream.ComputeUInt32Size(3, TotalCountUncapped);
         }
         size += UnknownFields.SerializedSize;
         memoizedSerializedSize = size;
@@ -759,11 +785,14 @@ namespace bnet.protocol.search {
       public override Builder MergeFrom(FindMatchesResponse other) {
         if (other == global::bnet.protocol.search.FindMatchesResponse.DefaultInstance) return this;
         PrepareBuilder();
-        if (other.HasTotalCount) {
-          TotalCount = other.TotalCount;
+        if (other.HasTotalCountCapped) {
+          TotalCountCapped = other.TotalCountCapped;
         }
         if (other.objects_.Count != 0) {
           result.objects_.Add(other.objects_);
+        }
+        if (other.HasTotalCountUncapped) {
+          TotalCountUncapped = other.TotalCountUncapped;
         }
         this.MergeUnknownFields(other.UnknownFields);
         return this;
@@ -809,11 +838,15 @@ namespace bnet.protocol.search {
               break;
             }
             case 8: {
-              result.hasTotalCount = input.ReadUInt32(ref result.totalCount_);
+              result.hasTotalCountCapped = input.ReadUInt32(ref result.totalCountCapped_);
               break;
             }
             case 18: {
               input.ReadMessageArray(tag, field_name, result.objects_, global::bnet.protocol.search.Object.DefaultInstance, extensionRegistry);
+              break;
+            }
+            case 24: {
+              result.hasTotalCountUncapped = input.ReadUInt32(ref result.totalCountUncapped_);
               break;
             }
           }
@@ -826,23 +859,23 @@ namespace bnet.protocol.search {
       }
       
       
-      public bool HasTotalCount {
-        get { return result.hasTotalCount; }
+      public bool HasTotalCountCapped {
+        get { return result.hasTotalCountCapped; }
       }
-      public uint TotalCount {
-        get { return result.TotalCount; }
-        set { SetTotalCount(value); }
+      public uint TotalCountCapped {
+        get { return result.TotalCountCapped; }
+        set { SetTotalCountCapped(value); }
       }
-      public Builder SetTotalCount(uint value) {
+      public Builder SetTotalCountCapped(uint value) {
         PrepareBuilder();
-        result.hasTotalCount = true;
-        result.totalCount_ = value;
+        result.hasTotalCountCapped = true;
+        result.totalCountCapped_ = value;
         return this;
       }
-      public Builder ClearTotalCount() {
+      public Builder ClearTotalCountCapped() {
         PrepareBuilder();
-        result.hasTotalCount = false;
-        result.totalCount_ = 0;
+        result.hasTotalCountCapped = false;
+        result.totalCountCapped_ = 0;
         return this;
       }
       
@@ -887,6 +920,26 @@ namespace bnet.protocol.search {
       public Builder ClearObjects() {
         PrepareBuilder();
         result.objects_.Clear();
+        return this;
+      }
+      
+      public bool HasTotalCountUncapped {
+        get { return result.hasTotalCountUncapped; }
+      }
+      public uint TotalCountUncapped {
+        get { return result.TotalCountUncapped; }
+        set { SetTotalCountUncapped(value); }
+      }
+      public Builder SetTotalCountUncapped(uint value) {
+        PrepareBuilder();
+        result.hasTotalCountUncapped = true;
+        result.totalCountUncapped_ = value;
+        return this;
+      }
+      public Builder ClearTotalCountUncapped() {
+        PrepareBuilder();
+        result.hasTotalCountUncapped = false;
+        result.totalCountUncapped_ = 0;
         return this;
       }
     }
@@ -1523,11 +1576,304 @@ namespace bnet.protocol.search {
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
   [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ProtoGen", "2.4.1.473")]
+  public sealed partial class IndexBlacklistConfig : pb::GeneratedMessage<IndexBlacklistConfig, IndexBlacklistConfig.Builder> {
+    private IndexBlacklistConfig() { }
+    private static readonly IndexBlacklistConfig defaultInstance = new IndexBlacklistConfig().MakeReadOnly();
+    private static readonly string[] _indexBlacklistConfigFieldNames = new string[] { "index" };
+    private static readonly uint[] _indexBlacklistConfigFieldTags = new uint[] { 8 };
+    public static IndexBlacklistConfig DefaultInstance {
+      get { return defaultInstance; }
+    }
+    
+    public override IndexBlacklistConfig DefaultInstanceForType {
+      get { return DefaultInstance; }
+    }
+    
+    protected override IndexBlacklistConfig ThisMessage {
+      get { return this; }
+    }
+    
+    public static pbd::MessageDescriptor Descriptor {
+      get { return global::bnet.protocol.search.Proto.SearchService.internal__static_bnet_protocol_search_IndexBlacklistConfig__Descriptor; }
+    }
+    
+    protected override pb::FieldAccess.FieldAccessorTable<IndexBlacklistConfig, IndexBlacklistConfig.Builder> InternalFieldAccessors {
+      get { return global::bnet.protocol.search.Proto.SearchService.internal__static_bnet_protocol_search_IndexBlacklistConfig__FieldAccessorTable; }
+    }
+    
+    public const int IndexFieldNumber = 1;
+    private pbc::PopsicleList<ulong> index_ = new pbc::PopsicleList<ulong>();
+    public scg::IList<ulong> IndexList {
+      get { return pbc::Lists.AsReadOnly(index_); }
+    }
+    public int IndexCount {
+      get { return index_.Count; }
+    }
+    public ulong GetIndex(int index) {
+      return index_[index];
+    }
+    
+    public override bool IsInitialized {
+      get {
+        return true;
+      }
+    }
+    
+    public override void WriteTo(pb::ICodedOutputStream output) {
+      int size = SerializedSize;
+      string[] field_names = _indexBlacklistConfigFieldNames;
+      if (index_.Count > 0) {
+        output.WriteUInt64Array(1, field_names[0], index_);
+      }
+      UnknownFields.WriteTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public override int SerializedSize {
+      get {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+        
+        size = 0;
+        {
+          int dataSize = 0;
+          foreach (ulong element in IndexList) {
+            dataSize += pb::CodedOutputStream.ComputeUInt64SizeNoTag(element);
+          }
+          size += dataSize;
+          size += 1 * index_.Count;
+        }
+        size += UnknownFields.SerializedSize;
+        memoizedSerializedSize = size;
+        return size;
+      }
+    }
+    
+    public static IndexBlacklistConfig ParseFrom(pb::ByteString data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static IndexBlacklistConfig ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static IndexBlacklistConfig ParseFrom(byte[] data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static IndexBlacklistConfig ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static IndexBlacklistConfig ParseFrom(global::System.IO.Stream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static IndexBlacklistConfig ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    public static IndexBlacklistConfig ParseDelimitedFrom(global::System.IO.Stream input) {
+      return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
+    }
+    public static IndexBlacklistConfig ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
+    }
+    public static IndexBlacklistConfig ParseFrom(pb::ICodedInputStream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static IndexBlacklistConfig ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    private IndexBlacklistConfig MakeReadOnly() {
+      index_.MakeReadOnly();
+      return this;
+    }
+    
+    public static Builder CreateBuilder() { return new Builder(); }
+    public override Builder ToBuilder() { return CreateBuilder(this); }
+    public override Builder CreateBuilderForType() { return new Builder(); }
+    public static Builder CreateBuilder(IndexBlacklistConfig prototype) {
+      return new Builder(prototype);
+    }
+    
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ProtoGen", "2.4.1.473")]
+    public sealed partial class Builder : pb::GeneratedBuilder<IndexBlacklistConfig, Builder> {
+      protected override Builder ThisBuilder {
+        get { return this; }
+      }
+      public Builder() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+      }
+      internal Builder(IndexBlacklistConfig cloneFrom) {
+        result = cloneFrom;
+        resultIsReadOnly = true;
+      }
+      
+      private bool resultIsReadOnly;
+      private IndexBlacklistConfig result;
+      
+      private IndexBlacklistConfig PrepareBuilder() {
+        if (resultIsReadOnly) {
+          IndexBlacklistConfig original = result;
+          result = new IndexBlacklistConfig();
+          resultIsReadOnly = false;
+          MergeFrom(original);
+        }
+        return result;
+      }
+      
+      public override bool IsInitialized {
+        get { return result.IsInitialized; }
+      }
+      
+      protected override IndexBlacklistConfig MessageBeingBuilt {
+        get { return PrepareBuilder(); }
+      }
+      
+      public override Builder Clear() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+        return this;
+      }
+      
+      public override Builder Clone() {
+        if (resultIsReadOnly) {
+          return new Builder(result);
+        } else {
+          return new Builder().MergeFrom(result);
+        }
+      }
+      
+      public override pbd::MessageDescriptor DescriptorForType {
+        get { return global::bnet.protocol.search.IndexBlacklistConfig.Descriptor; }
+      }
+      
+      public override IndexBlacklistConfig DefaultInstanceForType {
+        get { return global::bnet.protocol.search.IndexBlacklistConfig.DefaultInstance; }
+      }
+      
+      public override IndexBlacklistConfig BuildPartial() {
+        if (resultIsReadOnly) {
+          return result;
+        }
+        resultIsReadOnly = true;
+        return result.MakeReadOnly();
+      }
+      
+      public override Builder MergeFrom(pb::IMessage other) {
+        if (other is IndexBlacklistConfig) {
+          return MergeFrom((IndexBlacklistConfig) other);
+        } else {
+          base.MergeFrom(other);
+          return this;
+        }
+      }
+      
+      public override Builder MergeFrom(IndexBlacklistConfig other) {
+        if (other == global::bnet.protocol.search.IndexBlacklistConfig.DefaultInstance) return this;
+        PrepareBuilder();
+        if (other.index_.Count != 0) {
+          result.index_.Add(other.index_);
+        }
+        this.MergeUnknownFields(other.UnknownFields);
+        return this;
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input) {
+        return MergeFrom(input, pb::ExtensionRegistry.Empty);
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+        PrepareBuilder();
+        pb::UnknownFieldSet.Builder unknownFields = null;
+        uint tag;
+        string field_name;
+        while (input.ReadTag(out tag, out field_name)) {
+          if(tag == 0 && field_name != null) {
+            int field_ordinal = global::System.Array.BinarySearch(_indexBlacklistConfigFieldNames, field_name, global::System.StringComparer.Ordinal);
+            if(field_ordinal >= 0)
+              tag = _indexBlacklistConfigFieldTags[field_ordinal];
+            else {
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              continue;
+            }
+          }
+          switch (tag) {
+            case 0: {
+              throw pb::InvalidProtocolBufferException.InvalidTag();
+            }
+            default: {
+              if (pb::WireFormat.IsEndGroupTag(tag)) {
+                if (unknownFields != null) {
+                  this.UnknownFields = unknownFields.Build();
+                }
+                return this;
+              }
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              break;
+            }
+            case 10:
+            case 8: {
+              input.ReadUInt64Array(tag, field_name, result.index_);
+              break;
+            }
+          }
+        }
+        
+        if (unknownFields != null) {
+          this.UnknownFields = unknownFields.Build();
+        }
+        return this;
+      }
+      
+      
+      public pbc::IPopsicleList<ulong> IndexList {
+        get { return PrepareBuilder().index_; }
+      }
+      public int IndexCount {
+        get { return result.IndexCount; }
+      }
+      public ulong GetIndex(int index) {
+        return result.GetIndex(index);
+      }
+      public Builder SetIndex(int index, ulong value) {
+        PrepareBuilder();
+        result.index_[index] = value;
+        return this;
+      }
+      public Builder AddIndex(ulong value) {
+        PrepareBuilder();
+        result.index_.Add(value);
+        return this;
+      }
+      public Builder AddRangeIndex(scg::IEnumerable<ulong> values) {
+        PrepareBuilder();
+        result.index_.Add(values);
+        return this;
+      }
+      public Builder ClearIndex() {
+        PrepareBuilder();
+        result.index_.Clear();
+        return this;
+      }
+    }
+    static IndexBlacklistConfig() {
+      object.ReferenceEquals(global::bnet.protocol.search.Proto.SearchService.Descriptor, null);
+    }
+  }
+  
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+  [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ProtoGen", "2.4.1.473")]
   public sealed partial class SearchConfig : pb::GeneratedMessage<SearchConfig, SearchConfig.Builder> {
     private SearchConfig() { }
     private static readonly SearchConfig defaultInstance = new SearchConfig().MakeReadOnly();
-    private static readonly string[] _searchConfigFieldNames = new string[] {  };
-    private static readonly uint[] _searchConfigFieldTags = new uint[] {  };
+    private static readonly string[] _searchConfigFieldNames = new string[] { "index_blacklist" };
+    private static readonly uint[] _searchConfigFieldTags = new uint[] { 10 };
     public static SearchConfig DefaultInstance {
       get { return defaultInstance; }
     }
@@ -1548,6 +1894,16 @@ namespace bnet.protocol.search {
       get { return global::bnet.protocol.search.Proto.SearchService.internal__static_bnet_protocol_search_SearchConfig__FieldAccessorTable; }
     }
     
+    public const int IndexBlacklistFieldNumber = 1;
+    private bool hasIndexBlacklist;
+    private global::bnet.protocol.search.IndexBlacklistConfig indexBlacklist_;
+    public bool HasIndexBlacklist {
+      get { return hasIndexBlacklist; }
+    }
+    public global::bnet.protocol.search.IndexBlacklistConfig IndexBlacklist {
+      get { return indexBlacklist_ ?? global::bnet.protocol.search.IndexBlacklistConfig.DefaultInstance; }
+    }
+    
     public override bool IsInitialized {
       get {
         return true;
@@ -1557,6 +1913,9 @@ namespace bnet.protocol.search {
     public override void WriteTo(pb::ICodedOutputStream output) {
       int size = SerializedSize;
       string[] field_names = _searchConfigFieldNames;
+      if (hasIndexBlacklist) {
+        output.WriteMessage(1, field_names[0], IndexBlacklist);
+      }
       UnknownFields.WriteTo(output);
     }
     
@@ -1567,6 +1926,9 @@ namespace bnet.protocol.search {
         if (size != -1) return size;
         
         size = 0;
+        if (hasIndexBlacklist) {
+          size += pb::CodedOutputStream.ComputeMessageSize(1, IndexBlacklist);
+        }
         size += UnknownFields.SerializedSize;
         memoizedSerializedSize = size;
         return size;
@@ -1693,6 +2055,9 @@ namespace bnet.protocol.search {
       public override Builder MergeFrom(SearchConfig other) {
         if (other == global::bnet.protocol.search.SearchConfig.DefaultInstance) return this;
         PrepareBuilder();
+        if (other.HasIndexBlacklist) {
+          MergeIndexBlacklist(other.IndexBlacklist);
+        }
         this.MergeUnknownFields(other.UnknownFields);
         return this;
       }
@@ -1736,6 +2101,15 @@ namespace bnet.protocol.search {
               ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
               break;
             }
+            case 10: {
+              global::bnet.protocol.search.IndexBlacklistConfig.Builder subBuilder = global::bnet.protocol.search.IndexBlacklistConfig.CreateBuilder();
+              if (result.hasIndexBlacklist) {
+                subBuilder.MergeFrom(IndexBlacklist);
+              }
+              input.ReadMessage(subBuilder, extensionRegistry);
+              IndexBlacklist = subBuilder.BuildPartial();
+              break;
+            }
           }
         }
         
@@ -1745,6 +2119,46 @@ namespace bnet.protocol.search {
         return this;
       }
       
+      
+      public bool HasIndexBlacklist {
+       get { return result.hasIndexBlacklist; }
+      }
+      public global::bnet.protocol.search.IndexBlacklistConfig IndexBlacklist {
+        get { return result.IndexBlacklist; }
+        set { SetIndexBlacklist(value); }
+      }
+      public Builder SetIndexBlacklist(global::bnet.protocol.search.IndexBlacklistConfig value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasIndexBlacklist = true;
+        result.indexBlacklist_ = value;
+        return this;
+      }
+      public Builder SetIndexBlacklist(global::bnet.protocol.search.IndexBlacklistConfig.Builder builderForValue) {
+        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
+        PrepareBuilder();
+        result.hasIndexBlacklist = true;
+        result.indexBlacklist_ = builderForValue.Build();
+        return this;
+      }
+      public Builder MergeIndexBlacklist(global::bnet.protocol.search.IndexBlacklistConfig value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        if (result.hasIndexBlacklist &&
+            result.indexBlacklist_ != global::bnet.protocol.search.IndexBlacklistConfig.DefaultInstance) {
+            result.indexBlacklist_ = global::bnet.protocol.search.IndexBlacklistConfig.CreateBuilder(result.indexBlacklist_).MergeFrom(value).BuildPartial();
+        } else {
+          result.indexBlacklist_ = value;
+        }
+        result.hasIndexBlacklist = true;
+        return this;
+      }
+      public Builder ClearIndexBlacklist() {
+        PrepareBuilder();
+        result.hasIndexBlacklist = false;
+        result.indexBlacklist_ = null;
+        return this;
+      }
     }
     static SearchConfig() {
       object.ReferenceEquals(global::bnet.protocol.search.Proto.SearchService.Descriptor, null);

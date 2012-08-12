@@ -46,21 +46,23 @@ namespace D3.Account {
           "RDMuT25saW5lU2VydmljZS5FbnRpdHlJZBI9ChRiYW5uZXJfY29uZmlndXJh" + 
           "dGlvbhgDIAIoCzIfLkQzLkFjY291bnQuQmFubmVyQ29uZmlndXJhdGlvbhIQ" + 
           "CgVmbGFncxgEIAIoDToBMCIjCgVGbGFncxIaChZIQVJEQ09SRV9IRVJPX1VO" + 
-          "TE9DS0VEEAEihAUKD1NhdmVkRGVmaW5pdGlvbhIPCgd2ZXJzaW9uGAEgAigN" + 
+          "TE9DS0VEEAEi0AUKD1NhdmVkRGVmaW5pdGlvbhIPCgd2ZXJzaW9uGAEgAigN" + 
           "EiIKBmRpZ2VzdBgCIAEoCzISLkQzLkFjY291bnQuRGlnZXN0EkEKEHNhdmVk" + 
           "X2F0dHJpYnV0ZXMYAyACKAsyJy5EMy5BdHRyaWJ1dGVTZXJpYWxpemVyLlNh" + 
-          "dmVkQXR0cmlidXRlcxI1Chlub3JtYWxfc2hhcmVkX3NhdmVkX2l0ZW1zGAQg" + 
-          "ASgLMhIuRDMuSXRlbXMuSXRlbUxpc3QSNwobaGFyZGNvcmVfc2hhcmVkX3Nh" + 
-          "dmVkX2l0ZW1zGAUgASgLMhIuRDMuSXRlbXMuSXRlbUxpc3QSPgoTY3JhZnRl" + 
-          "cl9ub3JtYWxfZGF0YRgGIAEoCzIhLkQzLkl0ZW1DcmFmdGluZy5DcmFmdGVy" + 
-          "U2F2ZWREYXRhEkAKFWNyYWZ0ZXJfaGFyZGNvcmVfZGF0YRgOIAEoCzIhLkQz" + 
-          "Lkl0ZW1DcmFmdGluZy5DcmFmdGVyU2F2ZWREYXRhEhYKDnNlZW5fdHV0b3Jp" + 
-          "YWxzGAcgASgMEiYKHm51bV92b3RlX2tpY2tzX3BhcnRpY2lwYXRlZF9pbhgI" + 
-          "IAEoEBIgChhudW1fdm90ZV9raWNrc19pbml0aWF0ZWQYCSABKBASIAoYbnVt" + 
-          "X3B1YmxpY19nYW1lc19ub19raWNrGAogASgQEhkKEXRpbWVzX3ZvdGVfa2lj" + 
-          "a2VkGAsgASgQEjIKDmdvbGRfaWRfbm9ybWFsGAwgASgLMhouRDMuT25saW5l" + 
-          "U2VydmljZS5FbnRpdHlJZBI0ChBnb2xkX2lkX2hhcmRjb3JlGA0gASgLMhou" + 
-          "RDMuT25saW5lU2VydmljZS5FbnRpdHlJZA==");
+          "dmVkQXR0cmlidXRlcxJKChlzYXZlZF9hdHRyaWJ1dGVzX2hhcmRjb3JlGAQg" + 
+          "ASgLMicuRDMuQXR0cmlidXRlU2VyaWFsaXplci5TYXZlZEF0dHJpYnV0ZXMS" + 
+          "NQoZbm9ybWFsX3NoYXJlZF9zYXZlZF9pdGVtcxgFIAEoCzISLkQzLkl0ZW1z" + 
+          "Lkl0ZW1MaXN0EjcKG2hhcmRjb3JlX3NoYXJlZF9zYXZlZF9pdGVtcxgGIAEo" + 
+          "CzISLkQzLkl0ZW1zLkl0ZW1MaXN0Ej4KE2NyYWZ0ZXJfbm9ybWFsX2RhdGEY" + 
+          "ByABKAsyIS5EMy5JdGVtQ3JhZnRpbmcuQ3JhZnRlclNhdmVkRGF0YRJAChVj" + 
+          "cmFmdGVyX2hhcmRjb3JlX2RhdGEYCCABKAsyIS5EMy5JdGVtQ3JhZnRpbmcu" + 
+          "Q3JhZnRlclNhdmVkRGF0YRIWCg5zZWVuX3R1dG9yaWFscxgJIAEoDBImCh5u" + 
+          "dW1fdm90ZV9raWNrc19wYXJ0aWNpcGF0ZWRfaW4YCiABKBASIAoYbnVtX3Zv" + 
+          "dGVfa2lja3NfaW5pdGlhdGVkGAsgASgQEiAKGG51bV9wdWJsaWNfZ2FtZXNf" + 
+          "bm9fa2ljaxgMIAEoEBIZChF0aW1lc192b3RlX2tpY2tlZBgNIAEoEBIyCg5n" + 
+          "b2xkX2lkX25vcm1hbBgOIAEoCzIaLkQzLk9ubGluZVNlcnZpY2UuRW50aXR5" + 
+          "SWQSNAoQZ29sZF9pZF9oYXJkY29yZRgPIAEoCzIaLkQzLk9ubGluZVNlcnZp" + 
+          "Y2UuRW50aXR5SWQ=");
       pbd::FileDescriptor.InternalDescriptorAssigner assigner = delegate(pbd::FileDescriptor root) {
         descriptor = root;
         internal__static_D3_Account_BannerConfiguration__Descriptor = Descriptor.MessageTypes[0];
@@ -74,7 +76,7 @@ namespace D3.Account {
         internal__static_D3_Account_SavedDefinition__Descriptor = Descriptor.MessageTypes[2];
         internal__static_D3_Account_SavedDefinition__FieldAccessorTable = 
             new pb::FieldAccess.FieldAccessorTable<global::D3.Account.SavedDefinition, global::D3.Account.SavedDefinition.Builder>(internal__static_D3_Account_SavedDefinition__Descriptor,
-                new string[] { "Version", "Digest", "SavedAttributes", "NormalSharedSavedItems", "HardcoreSharedSavedItems", "CrafterNormalData", "CrafterHardcoreData", "SeenTutorials", "NumVoteKicksParticipatedIn", "NumVoteKicksInitiated", "NumPublicGamesNoKick", "TimesVoteKicked", "GoldIdNormal", "GoldIdHardcore", });
+                new string[] { "Version", "Digest", "SavedAttributes", "SavedAttributesHardcore", "NormalSharedSavedItems", "HardcoreSharedSavedItems", "CrafterNormalData", "CrafterHardcoreData", "SeenTutorials", "NumVoteKicksParticipatedIn", "NumVoteKicksInitiated", "NumPublicGamesNoKick", "TimesVoteKicked", "GoldIdNormal", "GoldIdHardcore", });
         return null;
       };
       pbd::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
@@ -1238,8 +1240,8 @@ namespace D3.Account {
   public sealed partial class SavedDefinition : pb::GeneratedMessage<SavedDefinition, SavedDefinition.Builder> {
     private SavedDefinition() { }
     private static readonly SavedDefinition defaultInstance = new SavedDefinition().MakeReadOnly();
-    private static readonly string[] _savedDefinitionFieldNames = new string[] { "crafter_hardcore_data", "crafter_normal_data", "digest", "gold_id_hardcore", "gold_id_normal", "hardcore_shared_saved_items", "normal_shared_saved_items", "num_public_games_no_kick", "num_vote_kicks_initiated", "num_vote_kicks_participated_in", "saved_attributes", "seen_tutorials", "times_vote_kicked", "version" };
-    private static readonly uint[] _savedDefinitionFieldTags = new uint[] { 114, 50, 18, 106, 98, 42, 34, 81, 73, 65, 26, 58, 89, 8 };
+    private static readonly string[] _savedDefinitionFieldNames = new string[] { "crafter_hardcore_data", "crafter_normal_data", "digest", "gold_id_hardcore", "gold_id_normal", "hardcore_shared_saved_items", "normal_shared_saved_items", "num_public_games_no_kick", "num_vote_kicks_initiated", "num_vote_kicks_participated_in", "saved_attributes", "saved_attributes_hardcore", "seen_tutorials", "times_vote_kicked", "version" };
+    private static readonly uint[] _savedDefinitionFieldTags = new uint[] { 66, 58, 18, 122, 114, 50, 42, 97, 89, 81, 26, 34, 74, 105, 8 };
     public static SavedDefinition DefaultInstance {
       get { return defaultInstance; }
     }
@@ -1290,7 +1292,17 @@ namespace D3.Account {
       get { return savedAttributes_ ?? global::D3.AttributeSerializer.SavedAttributes.DefaultInstance; }
     }
     
-    public const int NormalSharedSavedItemsFieldNumber = 4;
+    public const int SavedAttributesHardcoreFieldNumber = 4;
+    private bool hasSavedAttributesHardcore;
+    private global::D3.AttributeSerializer.SavedAttributes savedAttributesHardcore_;
+    public bool HasSavedAttributesHardcore {
+      get { return hasSavedAttributesHardcore; }
+    }
+    public global::D3.AttributeSerializer.SavedAttributes SavedAttributesHardcore {
+      get { return savedAttributesHardcore_ ?? global::D3.AttributeSerializer.SavedAttributes.DefaultInstance; }
+    }
+    
+    public const int NormalSharedSavedItemsFieldNumber = 5;
     private bool hasNormalSharedSavedItems;
     private global::D3.Items.ItemList normalSharedSavedItems_;
     public bool HasNormalSharedSavedItems {
@@ -1300,7 +1312,7 @@ namespace D3.Account {
       get { return normalSharedSavedItems_ ?? global::D3.Items.ItemList.DefaultInstance; }
     }
     
-    public const int HardcoreSharedSavedItemsFieldNumber = 5;
+    public const int HardcoreSharedSavedItemsFieldNumber = 6;
     private bool hasHardcoreSharedSavedItems;
     private global::D3.Items.ItemList hardcoreSharedSavedItems_;
     public bool HasHardcoreSharedSavedItems {
@@ -1310,7 +1322,7 @@ namespace D3.Account {
       get { return hardcoreSharedSavedItems_ ?? global::D3.Items.ItemList.DefaultInstance; }
     }
     
-    public const int CrafterNormalDataFieldNumber = 6;
+    public const int CrafterNormalDataFieldNumber = 7;
     private bool hasCrafterNormalData;
     private global::D3.ItemCrafting.CrafterSavedData crafterNormalData_;
     public bool HasCrafterNormalData {
@@ -1320,7 +1332,7 @@ namespace D3.Account {
       get { return crafterNormalData_ ?? global::D3.ItemCrafting.CrafterSavedData.DefaultInstance; }
     }
     
-    public const int CrafterHardcoreDataFieldNumber = 14;
+    public const int CrafterHardcoreDataFieldNumber = 8;
     private bool hasCrafterHardcoreData;
     private global::D3.ItemCrafting.CrafterSavedData crafterHardcoreData_;
     public bool HasCrafterHardcoreData {
@@ -1330,7 +1342,7 @@ namespace D3.Account {
       get { return crafterHardcoreData_ ?? global::D3.ItemCrafting.CrafterSavedData.DefaultInstance; }
     }
     
-    public const int SeenTutorialsFieldNumber = 7;
+    public const int SeenTutorialsFieldNumber = 9;
     private bool hasSeenTutorials;
     private pb::ByteString seenTutorials_ = pb::ByteString.Empty;
     public bool HasSeenTutorials {
@@ -1340,7 +1352,7 @@ namespace D3.Account {
       get { return seenTutorials_; }
     }
     
-    public const int NumVoteKicksParticipatedInFieldNumber = 8;
+    public const int NumVoteKicksParticipatedInFieldNumber = 10;
     private bool hasNumVoteKicksParticipatedIn;
     private long numVoteKicksParticipatedIn_;
     public bool HasNumVoteKicksParticipatedIn {
@@ -1350,7 +1362,7 @@ namespace D3.Account {
       get { return numVoteKicksParticipatedIn_; }
     }
     
-    public const int NumVoteKicksInitiatedFieldNumber = 9;
+    public const int NumVoteKicksInitiatedFieldNumber = 11;
     private bool hasNumVoteKicksInitiated;
     private long numVoteKicksInitiated_;
     public bool HasNumVoteKicksInitiated {
@@ -1360,7 +1372,7 @@ namespace D3.Account {
       get { return numVoteKicksInitiated_; }
     }
     
-    public const int NumPublicGamesNoKickFieldNumber = 10;
+    public const int NumPublicGamesNoKickFieldNumber = 12;
     private bool hasNumPublicGamesNoKick;
     private long numPublicGamesNoKick_;
     public bool HasNumPublicGamesNoKick {
@@ -1370,7 +1382,7 @@ namespace D3.Account {
       get { return numPublicGamesNoKick_; }
     }
     
-    public const int TimesVoteKickedFieldNumber = 11;
+    public const int TimesVoteKickedFieldNumber = 13;
     private bool hasTimesVoteKicked;
     private long timesVoteKicked_;
     public bool HasTimesVoteKicked {
@@ -1380,7 +1392,7 @@ namespace D3.Account {
       get { return timesVoteKicked_; }
     }
     
-    public const int GoldIdNormalFieldNumber = 12;
+    public const int GoldIdNormalFieldNumber = 14;
     private bool hasGoldIdNormal;
     private global::D3.OnlineService.EntityId goldIdNormal_;
     public bool HasGoldIdNormal {
@@ -1390,7 +1402,7 @@ namespace D3.Account {
       get { return goldIdNormal_ ?? global::D3.OnlineService.EntityId.DefaultInstance; }
     }
     
-    public const int GoldIdHardcoreFieldNumber = 13;
+    public const int GoldIdHardcoreFieldNumber = 15;
     private bool hasGoldIdHardcore;
     private global::D3.OnlineService.EntityId goldIdHardcore_;
     public bool HasGoldIdHardcore {
@@ -1408,6 +1420,9 @@ namespace D3.Account {
           if (!Digest.IsInitialized) return false;
         }
         if (!SavedAttributes.IsInitialized) return false;
+        if (HasSavedAttributesHardcore) {
+          if (!SavedAttributesHardcore.IsInitialized) return false;
+        }
         if (HasNormalSharedSavedItems) {
           if (!NormalSharedSavedItems.IsInitialized) return false;
         }
@@ -1434,7 +1449,7 @@ namespace D3.Account {
       int size = SerializedSize;
       string[] field_names = _savedDefinitionFieldNames;
       if (hasVersion) {
-        output.WriteUInt32(1, field_names[13], Version);
+        output.WriteUInt32(1, field_names[14], Version);
       }
       if (hasDigest) {
         output.WriteMessage(2, field_names[2], Digest);
@@ -1442,38 +1457,41 @@ namespace D3.Account {
       if (hasSavedAttributes) {
         output.WriteMessage(3, field_names[10], SavedAttributes);
       }
+      if (hasSavedAttributesHardcore) {
+        output.WriteMessage(4, field_names[11], SavedAttributesHardcore);
+      }
       if (hasNormalSharedSavedItems) {
-        output.WriteMessage(4, field_names[6], NormalSharedSavedItems);
+        output.WriteMessage(5, field_names[6], NormalSharedSavedItems);
       }
       if (hasHardcoreSharedSavedItems) {
-        output.WriteMessage(5, field_names[5], HardcoreSharedSavedItems);
+        output.WriteMessage(6, field_names[5], HardcoreSharedSavedItems);
       }
       if (hasCrafterNormalData) {
-        output.WriteMessage(6, field_names[1], CrafterNormalData);
-      }
-      if (hasSeenTutorials) {
-        output.WriteBytes(7, field_names[11], SeenTutorials);
-      }
-      if (hasNumVoteKicksParticipatedIn) {
-        output.WriteSFixed64(8, field_names[9], NumVoteKicksParticipatedIn);
-      }
-      if (hasNumVoteKicksInitiated) {
-        output.WriteSFixed64(9, field_names[8], NumVoteKicksInitiated);
-      }
-      if (hasNumPublicGamesNoKick) {
-        output.WriteSFixed64(10, field_names[7], NumPublicGamesNoKick);
-      }
-      if (hasTimesVoteKicked) {
-        output.WriteSFixed64(11, field_names[12], TimesVoteKicked);
-      }
-      if (hasGoldIdNormal) {
-        output.WriteMessage(12, field_names[4], GoldIdNormal);
-      }
-      if (hasGoldIdHardcore) {
-        output.WriteMessage(13, field_names[3], GoldIdHardcore);
+        output.WriteMessage(7, field_names[1], CrafterNormalData);
       }
       if (hasCrafterHardcoreData) {
-        output.WriteMessage(14, field_names[0], CrafterHardcoreData);
+        output.WriteMessage(8, field_names[0], CrafterHardcoreData);
+      }
+      if (hasSeenTutorials) {
+        output.WriteBytes(9, field_names[12], SeenTutorials);
+      }
+      if (hasNumVoteKicksParticipatedIn) {
+        output.WriteSFixed64(10, field_names[9], NumVoteKicksParticipatedIn);
+      }
+      if (hasNumVoteKicksInitiated) {
+        output.WriteSFixed64(11, field_names[8], NumVoteKicksInitiated);
+      }
+      if (hasNumPublicGamesNoKick) {
+        output.WriteSFixed64(12, field_names[7], NumPublicGamesNoKick);
+      }
+      if (hasTimesVoteKicked) {
+        output.WriteSFixed64(13, field_names[13], TimesVoteKicked);
+      }
+      if (hasGoldIdNormal) {
+        output.WriteMessage(14, field_names[4], GoldIdNormal);
+      }
+      if (hasGoldIdHardcore) {
+        output.WriteMessage(15, field_names[3], GoldIdHardcore);
       }
       UnknownFields.WriteTo(output);
     }
@@ -1494,38 +1512,41 @@ namespace D3.Account {
         if (hasSavedAttributes) {
           size += pb::CodedOutputStream.ComputeMessageSize(3, SavedAttributes);
         }
+        if (hasSavedAttributesHardcore) {
+          size += pb::CodedOutputStream.ComputeMessageSize(4, SavedAttributesHardcore);
+        }
         if (hasNormalSharedSavedItems) {
-          size += pb::CodedOutputStream.ComputeMessageSize(4, NormalSharedSavedItems);
+          size += pb::CodedOutputStream.ComputeMessageSize(5, NormalSharedSavedItems);
         }
         if (hasHardcoreSharedSavedItems) {
-          size += pb::CodedOutputStream.ComputeMessageSize(5, HardcoreSharedSavedItems);
+          size += pb::CodedOutputStream.ComputeMessageSize(6, HardcoreSharedSavedItems);
         }
         if (hasCrafterNormalData) {
-          size += pb::CodedOutputStream.ComputeMessageSize(6, CrafterNormalData);
+          size += pb::CodedOutputStream.ComputeMessageSize(7, CrafterNormalData);
         }
         if (hasCrafterHardcoreData) {
-          size += pb::CodedOutputStream.ComputeMessageSize(14, CrafterHardcoreData);
+          size += pb::CodedOutputStream.ComputeMessageSize(8, CrafterHardcoreData);
         }
         if (hasSeenTutorials) {
-          size += pb::CodedOutputStream.ComputeBytesSize(7, SeenTutorials);
+          size += pb::CodedOutputStream.ComputeBytesSize(9, SeenTutorials);
         }
         if (hasNumVoteKicksParticipatedIn) {
-          size += pb::CodedOutputStream.ComputeSFixed64Size(8, NumVoteKicksParticipatedIn);
+          size += pb::CodedOutputStream.ComputeSFixed64Size(10, NumVoteKicksParticipatedIn);
         }
         if (hasNumVoteKicksInitiated) {
-          size += pb::CodedOutputStream.ComputeSFixed64Size(9, NumVoteKicksInitiated);
+          size += pb::CodedOutputStream.ComputeSFixed64Size(11, NumVoteKicksInitiated);
         }
         if (hasNumPublicGamesNoKick) {
-          size += pb::CodedOutputStream.ComputeSFixed64Size(10, NumPublicGamesNoKick);
+          size += pb::CodedOutputStream.ComputeSFixed64Size(12, NumPublicGamesNoKick);
         }
         if (hasTimesVoteKicked) {
-          size += pb::CodedOutputStream.ComputeSFixed64Size(11, TimesVoteKicked);
+          size += pb::CodedOutputStream.ComputeSFixed64Size(13, TimesVoteKicked);
         }
         if (hasGoldIdNormal) {
-          size += pb::CodedOutputStream.ComputeMessageSize(12, GoldIdNormal);
+          size += pb::CodedOutputStream.ComputeMessageSize(14, GoldIdNormal);
         }
         if (hasGoldIdHardcore) {
-          size += pb::CodedOutputStream.ComputeMessageSize(13, GoldIdHardcore);
+          size += pb::CodedOutputStream.ComputeMessageSize(15, GoldIdHardcore);
         }
         size += UnknownFields.SerializedSize;
         memoizedSerializedSize = size;
@@ -1662,6 +1683,9 @@ namespace D3.Account {
         if (other.HasSavedAttributes) {
           MergeSavedAttributes(other.SavedAttributes);
         }
+        if (other.HasSavedAttributesHardcore) {
+          MergeSavedAttributesHardcore(other.SavedAttributesHardcore);
+        }
         if (other.HasNormalSharedSavedItems) {
           MergeNormalSharedSavedItems(other.NormalSharedSavedItems);
         }
@@ -1761,6 +1785,15 @@ namespace D3.Account {
               break;
             }
             case 34: {
+              global::D3.AttributeSerializer.SavedAttributes.Builder subBuilder = global::D3.AttributeSerializer.SavedAttributes.CreateBuilder();
+              if (result.hasSavedAttributesHardcore) {
+                subBuilder.MergeFrom(SavedAttributesHardcore);
+              }
+              input.ReadMessage(subBuilder, extensionRegistry);
+              SavedAttributesHardcore = subBuilder.BuildPartial();
+              break;
+            }
+            case 42: {
               global::D3.Items.ItemList.Builder subBuilder = global::D3.Items.ItemList.CreateBuilder();
               if (result.hasNormalSharedSavedItems) {
                 subBuilder.MergeFrom(NormalSharedSavedItems);
@@ -1769,7 +1802,7 @@ namespace D3.Account {
               NormalSharedSavedItems = subBuilder.BuildPartial();
               break;
             }
-            case 42: {
+            case 50: {
               global::D3.Items.ItemList.Builder subBuilder = global::D3.Items.ItemList.CreateBuilder();
               if (result.hasHardcoreSharedSavedItems) {
                 subBuilder.MergeFrom(HardcoreSharedSavedItems);
@@ -1778,7 +1811,7 @@ namespace D3.Account {
               HardcoreSharedSavedItems = subBuilder.BuildPartial();
               break;
             }
-            case 50: {
+            case 58: {
               global::D3.ItemCrafting.CrafterSavedData.Builder subBuilder = global::D3.ItemCrafting.CrafterSavedData.CreateBuilder();
               if (result.hasCrafterNormalData) {
                 subBuilder.MergeFrom(CrafterNormalData);
@@ -1787,27 +1820,36 @@ namespace D3.Account {
               CrafterNormalData = subBuilder.BuildPartial();
               break;
             }
-            case 58: {
+            case 66: {
+              global::D3.ItemCrafting.CrafterSavedData.Builder subBuilder = global::D3.ItemCrafting.CrafterSavedData.CreateBuilder();
+              if (result.hasCrafterHardcoreData) {
+                subBuilder.MergeFrom(CrafterHardcoreData);
+              }
+              input.ReadMessage(subBuilder, extensionRegistry);
+              CrafterHardcoreData = subBuilder.BuildPartial();
+              break;
+            }
+            case 74: {
               result.hasSeenTutorials = input.ReadBytes(ref result.seenTutorials_);
               break;
             }
-            case 65: {
+            case 81: {
               result.hasNumVoteKicksParticipatedIn = input.ReadSFixed64(ref result.numVoteKicksParticipatedIn_);
               break;
             }
-            case 73: {
+            case 89: {
               result.hasNumVoteKicksInitiated = input.ReadSFixed64(ref result.numVoteKicksInitiated_);
               break;
             }
-            case 81: {
+            case 97: {
               result.hasNumPublicGamesNoKick = input.ReadSFixed64(ref result.numPublicGamesNoKick_);
               break;
             }
-            case 89: {
+            case 105: {
               result.hasTimesVoteKicked = input.ReadSFixed64(ref result.timesVoteKicked_);
               break;
             }
-            case 98: {
+            case 114: {
               global::D3.OnlineService.EntityId.Builder subBuilder = global::D3.OnlineService.EntityId.CreateBuilder();
               if (result.hasGoldIdNormal) {
                 subBuilder.MergeFrom(GoldIdNormal);
@@ -1816,22 +1858,13 @@ namespace D3.Account {
               GoldIdNormal = subBuilder.BuildPartial();
               break;
             }
-            case 106: {
+            case 122: {
               global::D3.OnlineService.EntityId.Builder subBuilder = global::D3.OnlineService.EntityId.CreateBuilder();
               if (result.hasGoldIdHardcore) {
                 subBuilder.MergeFrom(GoldIdHardcore);
               }
               input.ReadMessage(subBuilder, extensionRegistry);
               GoldIdHardcore = subBuilder.BuildPartial();
-              break;
-            }
-            case 114: {
-              global::D3.ItemCrafting.CrafterSavedData.Builder subBuilder = global::D3.ItemCrafting.CrafterSavedData.CreateBuilder();
-              if (result.hasCrafterHardcoreData) {
-                subBuilder.MergeFrom(CrafterHardcoreData);
-              }
-              input.ReadMessage(subBuilder, extensionRegistry);
-              CrafterHardcoreData = subBuilder.BuildPartial();
               break;
             }
           }
@@ -1941,6 +1974,46 @@ namespace D3.Account {
         PrepareBuilder();
         result.hasSavedAttributes = false;
         result.savedAttributes_ = null;
+        return this;
+      }
+      
+      public bool HasSavedAttributesHardcore {
+       get { return result.hasSavedAttributesHardcore; }
+      }
+      public global::D3.AttributeSerializer.SavedAttributes SavedAttributesHardcore {
+        get { return result.SavedAttributesHardcore; }
+        set { SetSavedAttributesHardcore(value); }
+      }
+      public Builder SetSavedAttributesHardcore(global::D3.AttributeSerializer.SavedAttributes value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasSavedAttributesHardcore = true;
+        result.savedAttributesHardcore_ = value;
+        return this;
+      }
+      public Builder SetSavedAttributesHardcore(global::D3.AttributeSerializer.SavedAttributes.Builder builderForValue) {
+        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
+        PrepareBuilder();
+        result.hasSavedAttributesHardcore = true;
+        result.savedAttributesHardcore_ = builderForValue.Build();
+        return this;
+      }
+      public Builder MergeSavedAttributesHardcore(global::D3.AttributeSerializer.SavedAttributes value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        if (result.hasSavedAttributesHardcore &&
+            result.savedAttributesHardcore_ != global::D3.AttributeSerializer.SavedAttributes.DefaultInstance) {
+            result.savedAttributesHardcore_ = global::D3.AttributeSerializer.SavedAttributes.CreateBuilder(result.savedAttributesHardcore_).MergeFrom(value).BuildPartial();
+        } else {
+          result.savedAttributesHardcore_ = value;
+        }
+        result.hasSavedAttributesHardcore = true;
+        return this;
+      }
+      public Builder ClearSavedAttributesHardcore() {
+        PrepareBuilder();
+        result.hasSavedAttributesHardcore = false;
+        result.savedAttributesHardcore_ = null;
         return this;
       }
       

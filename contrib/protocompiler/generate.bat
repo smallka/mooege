@@ -1,4 +1,10 @@
-@CHOICE /C:YN /M:"Have you made sure field 'item' in QuestProto.QuestReward has been renamed to 'item_granted'"
+@ECHO Have you made the following changes:
+@ECHO QuestProto.QuestReward - 'item' ^> 'item_granted'
+@ECHO HeroProto.QuestHistoryList - 'quest_history' ^> 'history'
+@ECHO HeroProto.QuestRewardHistoryList - 'quest_reward_history' ^> 'reward_history'
+@ECHO AuctionHouseProto.Escrow - 'item' ^> 'auction_item'
+
+@CHOICE /C:YN
 @IF ERRORLEVEL 2 goto :end
 
 CD definitions
@@ -26,6 +32,7 @@ CD definitions
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ bnet\channel_types.proto
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ bnet\chat_types.proto
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ bnet\exchange_service.proto
+"../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ bnet\field_options.proto
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ bnet\exchange_types.proto
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ bnet\friends_service.proto
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ bnet\friends_types.proto
@@ -45,8 +52,11 @@ CD definitions
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ bnet\server_pool_service.proto
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ bnet\session_service.proto
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ bnet\user_manager_service.proto
+"../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ bnet\user_manager_types.proto
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ Account.proto
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ AttributeSerializer.proto
+"../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ AuctionHouse.proto
+"../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ CS.proto
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ GameMessage.proto
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ GBHandle.proto
 "../compilers/protogen_csharp.exe" --proto_path=./ --include_imports -expand_namespace_directories=true -cls_compliance=false -ignore_google_protobuf=true -service_generator_type=GENERIC -output_directory=../bin/csharp/ Hero.proto

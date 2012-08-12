@@ -1,4 +1,13 @@
+###Current Status:
+* You can Login, create characters and enter world.
+* Client requires patching.
+
+***
+
 # Stay awhile and listen
+
+* Domains and Wiki are gone. Please join us on IRC.
+* 
 
 * Read the [FAQ](http://wiki.mooege.org/FAQ) and check the [wiki](http://wiki.mooege.org/) before asking!
 * Read the [WARNING](https://github.com/mooege/mooege/blob/master/WARNING) before starting to use this software!
@@ -6,7 +15,6 @@
 * IRC (**irc.synirc.net**):
   - **#mooege.chat** (general chat)
   - **#mooege** (dev talk)
-  - **#mooege.announce** (_only_ announcements and the commit feed)
 * [Twitter](http://twitter.com/#!/mooege), [Commit Feed](http://twitter.com/#!/mooegelog)
 
 # Welcome to mooege

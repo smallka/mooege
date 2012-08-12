@@ -31,6 +31,7 @@ namespace Mooege.Core.MooNet.Services
         private static readonly Logger Logger = LogManager.CreateLogger();
         public MooNetClient Client { get; set; }
         public bnet.protocol.Header LastCallHeader { get; set; }
+        public uint Status { get; set; }
 
         public override void PostUpdate(IRpcController controller, bnet.protocol.achievements.PostUpdateRequest request, Action<bnet.protocol.achievements.PostUpdateResponse> done)
         {
@@ -51,6 +52,7 @@ namespace Mooege.Core.MooNet.Services
                 snapshot.AddCriteriaSnapshot(criteria);
 
             var response = bnet.protocol.achievements.RegisterWithServiceResponse.CreateBuilder()
+                .SetRegistrationFlags(3)
                 .SetSnapshot(snapshot);
 
             done(response.Build());
@@ -86,8 +88,8 @@ namespace Mooege.Core.MooNet.Services
             Logger.Trace("Initialize()");
 
             var contentHandle = bnet.protocol.ContentHandle.CreateBuilder()
-                .SetRegion(VersionInfo.MooNet.Region)
-                .SetUsage(0x61636876) //achv
+                .SetRegion(VersionInfo.MooNet.Regions[VersionInfo.MooNet.Region])
+                .SetUsage(0x61636875) //achu
                 .SetHash(ByteString.CopyFrom(VersionInfo.MooNet.Achievements.AchievementFileHash.ToByteArray()));
             var reponse = bnet.protocol.achievements.InitializeResponse.CreateBuilder().SetContentHandle(contentHandle)
                 .SetMaxRecordsPerUpdate(1)

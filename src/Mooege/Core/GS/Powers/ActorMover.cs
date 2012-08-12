@@ -96,8 +96,8 @@ namespace Mooege.Core.GS.Powers
             baseMessage.ActorId = (int)this.Target.DynamicID;
             baseMessage.Start = this.Target.Position;
             baseMessage.Velocity = this.Velocity;
-            baseMessage.Field6 = gravity;
-            baseMessage.Field9 = destination.Z;
+            baseMessage.Gravity = gravity;
+            baseMessage.DestinationZ = destination.Z;
 
             this.Target.World.BroadcastIfRevealed(baseMessage, this.Target);
         }
@@ -107,12 +107,12 @@ namespace Mooege.Core.GS.Powers
             _UpdatePosition();
             return this.Arrived;
         }
-        
+
         private void _SetupMove(Vector3D destination, float speed)
         {
             Vector3D dir_normal = PowerMath.Normalize(new Vector3D(destination.X - this.Target.Position.X,
                                                                    destination.Y - this.Target.Position.Y,
-                                                                   0f));  // were not moving in 3d for now
+                                                                   destination.Z - this.Target.Position.Z));
 
             this.Velocity = new Vector3D(dir_normal.X * speed,
                                          dir_normal.Y * speed,

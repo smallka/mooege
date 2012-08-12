@@ -83,7 +83,12 @@ namespace Mooege.Core.GS.Powers
 
         public void Launch(Vector3D targetPosition, float speed)
         {
+            _onArrivalCalled = false;
+            _prevUpdatePosition = this.Position;
+
             this.TranslateFacing(targetPosition, true);
+            targetPosition = new Vector3D(targetPosition);
+            targetPosition.Z += this.ActorData.Cylinder.Ax1 - this.ActorData.Cylinder.Position.Z;
             if (!_spawned)
             {
                 this.EnterWorld(this.Position);
@@ -96,13 +101,13 @@ namespace Mooege.Core.GS.Powers
                 AnimationTag = AnimationSetKeys.IdleDefault.ID,
                 Field4 = -1
             });
-
-            _onArrivalCalled = false;
-            _prevUpdatePosition = this.Position;
         }
 
         public void LaunchArc(Vector3D destination, float arcHeight, float arcGravity, float visualBounce = 0f)
         {
+            _onArrivalCalled = false;
+            _prevUpdatePosition = this.Position;
+
             this.TranslateFacing(destination, true);
             if (!_spawned)
             {
@@ -115,12 +120,9 @@ namespace Mooege.Core.GS.Powers
                 Field3 = 0x00800000,
                 FlyingAnimationTagID = AnimationSetKeys.IdleDefault.ID,
                 LandingAnimationTagID = -1,
-                Field7 = this.Context.PowerSNO,
-                Field8 = visualBounce
+                PowerSNO = this.Context.PowerSNO,
+                Bounce = visualBounce
             });
-
-            _onArrivalCalled = false;
-            _prevUpdatePosition = this.Position;
         }
 
         private void _CheckCollisions()
@@ -133,7 +135,7 @@ namespace Mooege.Core.GS.Powers
             Circle startCircle = new Circle(_prevUpdatePosition.X, _prevUpdatePosition.Y, radius);
             // make a velocity representing the change to the current position
             Vector2F velocity = PowerMath.VectorWithoutZ(this.Position - _prevUpdatePosition);
-            
+
             Actor hit = null;
             TargetList targets = this.Context.GetEnemiesInRadius(this.Position, radius + 25f);
             if (CollisionFilter != null)
@@ -153,9 +155,11 @@ namespace Mooege.Core.GS.Powers
             if (hit != null)
                 OnCollision(hit);
         }
-        
+
         public void Update(int tickCounter)
         {
+            if (!_spawned) return;
+
             // gotta make sure the actor hasn't been deleted after processing each handler
 
             if (this.World != null)

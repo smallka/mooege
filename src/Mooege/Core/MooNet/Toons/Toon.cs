@@ -18,45 +18,76 @@
 
 using System;
 using System.Collections.Generic;
-using System.Data.SQLite;
-using Mooege.Common.Helpers.Hash;
+using System.Linq;
+using Mooege.Common.MPQ;
+using Mooege.Common.MPQ.FileFormats;
 using Mooege.Common.Storage;
+using Mooege.Common.Storage.AccountDataBase.Entities;
 using Mooege.Core.MooNet.Accounts;
 using Mooege.Core.MooNet.Helpers;
 using Mooege.Core.MooNet.Objects;
-using Mooege.Core.GS.Skills;
 using Mooege.Core.GS.Players;
+using NHibernate.Linq;
 
 namespace Mooege.Core.MooNet.Toons
 {
     public class Toon : PersistentRPCObject
     {
-
+        public DBToon DBToon { get; private set; }
         public IntPresenceField HeroClassField
-            = new IntPresenceField(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 1, 0);
-
-        public IntPresenceField HeroLevelField
-            = new IntPresenceField(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 2, 0);
-
-        public ByteStringPresenceField<D3.Hero.VisualEquipment> HeroVisualEquipmentField
-            = new ByteStringPresenceField<D3.Hero.VisualEquipment>(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 3, 0);
-
+        {
+            get
+            {
+                var val = new IntPresenceField(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 1, 0, this.ClassID);
+                return val;
+            }
+        }
         public IntPresenceField HeroFlagsField
-            = new IntPresenceField(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 4, 0);
-
+        {
+            get
+            {
+                var val = new IntPresenceField(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 4, 0, (int)this.DBToon.Flags);
+                return val;
+            }
+        }
+        public IntPresenceField HeroLevelField
+        {
+            get
+            {
+                var val = new IntPresenceField(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 2, 0, this.DBToon.Level);
+                return val;
+            }
+        }
         public StringPresenceField HeroNameField
-            = new StringPresenceField(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 5, 0);
+        { get { return new StringPresenceField(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 5, 0, this.DBToon.Name); } }
 
-        public IntPresenceField Field6
-            = new IntPresenceField(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 6, 0, 0);
 
-        public IntPresenceField Field7
-            = new IntPresenceField(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 7, 0, 0);
+
+
+        public ByteStringPresenceField<D3.Hero.VisualEquipment> HeroVisualEquipmentField = new ByteStringPresenceField<D3.Hero.VisualEquipment>(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 3, 0);
+
+
+
+
+
+
+        public IntPresenceField HighestUnlockedAct = new IntPresenceField(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 6, 0, 0);
+
+        public IntPresenceField HighestUnlockedDifficulty = new IntPresenceField(FieldKeyHelper.Program.D3, FieldKeyHelper.OriginatingClass.Hero, 7, 0, 0);
 
         /// <summary>
         /// D3 EntityID encoded id.
         /// </summary>
         public D3.OnlineService.EntityId D3EntityID { get; private set; }
+
+        /// <summary>
+        /// True if toon has been recently deleted;
+        /// </summary>
+        public bool Deleted
+        {
+            get { return this.DBToon.Deleted; }
+            set { this.DBToon.Deleted = value; }
+        }
 
         /// <summary>
         /// Toon handle struct.
@@ -66,43 +97,44 @@ namespace Mooege.Core.MooNet.Toons
         /// <summary>
         /// Toon's name.
         /// </summary>
-        private string _name;
-        public string Name {
+        public string Name
+        {
             get
             {
-                return _name;
+                return this.DBToon.Name;
             }
             private set
             {
-                this._name = value;
+                this.DBToon.Name = value;
                 this.HeroNameField.Value = value;
             }
         }
 
+        /*
         /// <summary>
         /// Toon's hash-code.
         /// </summary>
         public int HashCode { get; set; }
-
+        */
         /// <summary>
         /// Toon's owner account.
         /// </summary>
-        public GameAccount GameAccount { get; set; }
+        public GameAccount GameAccount { get { return GameAccountManager.GetGameAccountByDBGameAccount(this.DBToon.DBGameAccount); } set { this.DBToon.DBGameAccount = value.DBGameAccount; } }
 
         /// <summary>
         /// Toon's class.
         /// </summary>
-        private ToonClass _class;
         public ToonClass Class
         {
             get
             {
-                return _class;
+                return DBToon.Class;
             }
             private set
             {
-                _class = value;
-                switch (_class)
+                DBToon.Class = value;
+                /*
+                switch (DBToon.Class)
                 {
                     case ToonClass.Barbarian:
                         this.HeroClassField.Value = 0x4FB91EE2;
@@ -122,42 +154,38 @@ namespace Mooege.Core.MooNet.Toons
                     default:
                         this.HeroClassField.Value = 0x0;
                         break;
-                }
+                }*/
             }
         }
 
         /// <summary>
         /// Toon's flags.
         /// </summary>
-        private ToonFlags _flags;
         public ToonFlags Flags
         {
             get
             {
-                return _flags;
+                return this.DBToon.Flags;
             }
             private set
             {
-                _flags = value | ToonFlags.AllUnknowns;
-                this.HeroFlagsField.Value = (int)(value | ToonFlags.AllUnknowns);
+                this.DBToon.Flags = value | ToonFlags.AllUnknowns;
+                //this.HeroFlagsField.Value = (int)(value | ToonFlags.AllUnknowns);
             }
         }
 
         /// <summary>
         /// Toon's level.
         /// </summary>
-        //TODO: Remove this as soon as everywhere the field is used
-        private byte _level;
         public byte Level
         {
             get
             {
-                return _level;
+                return DBToon.Level;
             }
             private set
             {
-                this._level = value;
-                this.HeroLevelField.Value = value;
+                this.DBToon.Level = value;
             }
         }
 
@@ -169,7 +197,7 @@ namespace Mooege.Core.MooNet.Toons
         /// <summary>
         /// Total time played for toon.
         /// </summary>
-        public uint TimePlayed { get; set; }
+        public uint TimePlayed { get { return this.DBToon.TimePlayed; } set { this.DBToon.TimePlayed = value; } }
 
         /// <summary>
         /// Last login time for toon.
@@ -199,7 +227,7 @@ namespace Mooege.Core.MooNet.Toons
         {
             get
             {
-                return D3.Hero.Digest.CreateBuilder().SetVersion(901)
+                return D3.Hero.Digest.CreateBuilder().SetVersion(902)
                                 .SetHeroId(this.D3EntityID)
                                 .SetHeroName(this.Name)
                                 .SetGbidClass((int)this.ClassID)
@@ -242,7 +270,7 @@ namespace Mooege.Core.MooNet.Toons
                 else
                 {
                     if (this.GameAccount.CurrentToon != null)
-                        return this.GameAccount.CurrentToon.D3EntityID == this.D3EntityID;
+                        return this.GameAccount.CurrentToon == this;
                     else
                         return false;
                 }
@@ -301,6 +329,54 @@ namespace Mooege.Core.MooNet.Toons
 
         #region c-tor and setfields
 
+        public readonly HeroTable HeroTable;
+        private static readonly Mooege.Common.MPQ.FileFormats.GameBalance HeroData = (Mooege.Common.MPQ.FileFormats.GameBalance)MPQStorage.Data.Assets[Mooege.Core.GS.Common.Types.SNO.SNOGroup.GameBalance][19740].Data;
+
+        public Toon(DBToon dbToon)
+            : base(dbToon.Id)
+        {
+            this.D3EntityID = D3.OnlineService.EntityId.CreateBuilder().SetIdHigh((ulong)EntityIdHelper.HighIdType.ToonId).SetIdLow(this.PersistentID).Build();
+
+            this.DBToon = dbToon;
+            this.HeroTable = HeroData.Heros.Find(item => item.Name == this.Class.ToString());
+            this.ExperienceNext = Player.LevelBorders[this.Level];
+
+            var visualItems = new[]
+            {
+                D3.Hero.VisualItem.CreateBuilder().SetEffectLevel(0).Build(), // Head
+                D3.Hero.VisualItem.CreateBuilder().SetEffectLevel(0).Build(), // Chest
+                D3.Hero.VisualItem.CreateBuilder().SetEffectLevel(0).Build(), // Feet
+                D3.Hero.VisualItem.CreateBuilder().SetEffectLevel(0).Build(), // Hands
+                D3.Hero.VisualItem.CreateBuilder().SetEffectLevel(0).Build(), // Weapon (1)
+                D3.Hero.VisualItem.CreateBuilder().SetEffectLevel(0).Build(), // Weapon (2)
+                D3.Hero.VisualItem.CreateBuilder().SetEffectLevel(0).Build(), // Shoulders
+                D3.Hero.VisualItem.CreateBuilder().SetEffectLevel(0).Build(), // Legs
+            };
+
+            // Load Visual Equipment
+            var visualToSlotMapping = new Dictionary<int, int> { { 1, 0 }, { 2, 1 }, { 7, 2 }, { 5, 3 }, { 4, 4 }, { 3, 5 }, { 8, 6 }, { 9, 7 } };
+
+            //add visual equipment from DB, only the visualizable equipment, not everything
+            var visibleEquipment = DBSessions.AccountSession.Query<DBInventory>().Where(inv => inv.DBItemInstance != null && inv.DBToon.Id == dbToon.Id && inv.EquipmentSlot != -1).ToList();
+
+            foreach (var inv in visibleEquipment)
+            {
+                var slot = inv.EquipmentSlot;
+                if (!visualToSlotMapping.ContainsKey(slot))
+                    continue;
+                // decode vislual slot from equipment slot
+                slot = visualToSlotMapping[slot];
+                var gbid = inv.DBItemInstance.GbId;
+                visualItems[slot] = D3.Hero.VisualItem.CreateBuilder()
+                    .SetGbid(gbid)
+                    .SetEffectLevel(0)
+                    .Build();
+            }
+
+            this.HeroVisualEquipmentField.Value = D3.Hero.VisualEquipment.CreateBuilder().AddRangeVisualItem(visualItems).Build();
+        }
+
+        /* old non-db toon creation ctor. /raist.
         public Toon(string name, int hashCode, int classId, ToonFlags flags, byte level, GameAccount account) // Toon with **newly generated** persistent ID
             : base(StringHashHelper.HashIdentity(name + "#" + hashCode.ToString("D3")))
         {
@@ -350,6 +426,7 @@ namespace Mooege.Core.MooNet.Toons
                 this.ExperienceNext = Convert.ToInt32(sqlReader["experience"]);
                 this.GameAccount = GameAccountManager.GetAccountByPersistentID(Convert.ToUInt64(sqlReader["accountId"]));
                 this.TimePlayed = Convert.ToUInt32(sqlReader["timePlayed"]);
+                this.Deleted = Convert.ToBoolean(sqlReader["deleted"]);
             }
 
             var visualItems = new[]
@@ -376,7 +453,7 @@ namespace Mooege.Core.MooNet.Toons
             visualToSlotMapping.Add(9, 7);
             
             //add visual equipment form DB, only the visualizable equipment, not everything
-            var itemQuery = string.Format("SELECT * FROM inventory WHERE toon_id = {0} AND equipment_slot <> -1 AND inventory_type = 'equipped' AND item_id <> -1", persistentId);
+            var itemQuery = string.Format("SELECT * FROM inventory WHERE toon_id = {0} AND equipment_slot <> -1 AND item_id <> -1", persistentId);
             var itemCmd = new SQLiteCommand(itemQuery, DBManager.Connection);
             var itemReader = itemCmd.ExecuteReader();
             if (itemReader.HasRows)
@@ -397,7 +474,7 @@ namespace Mooege.Core.MooNet.Toons
             }
             this.HeroVisualEquipmentField.Value = D3.Hero.VisualEquipment.CreateBuilder().AddRangeVisualItem(visualItems).Build();
         }
-
+        */
         #endregion
 
         public void LevelUp()
@@ -425,15 +502,15 @@ namespace Mooege.Core.MooNet.Toons
             operationList.Add(this.HeroVisualEquipmentField.GetFieldOperation());
             operationList.Add(this.HeroFlagsField.GetFieldOperation());
             operationList.Add(this.HeroNameField.GetFieldOperation());
-            operationList.Add(this.Field6.GetFieldOperation());
-            operationList.Add(this.Field7.GetFieldOperation());
+            operationList.Add(this.HighestUnlockedAct.GetFieldOperation());
+            operationList.Add(this.HighestUnlockedDifficulty.GetFieldOperation());
 
             return operationList;
         }
 
         #endregion
 
-        private static ToonClass GetClassByID(int classId)
+        public static ToonClass GetClassByID(int classId)
         {
             switch (classId)
             {
@@ -459,99 +536,27 @@ namespace Mooege.Core.MooNet.Toons
 
         #region DB
 
-        public void SaveToDB()
-        {
-            try
-            {
-                // save character base data
-                if (ExistsInDB())
-                {
-                    var query =
-                        string.Format(
-                            "UPDATE toons SET name='{0}', hashCode={1}, class={2}, gender={3}, level={4}, experience={5}, accountId={6}, timePlayed={7} WHERE id={8}",
-                            this.Name, this.HashCode, (byte)this.Class, (byte)this.Gender, this.Level, this.ExperienceNext, this.GameAccount.PersistentID, this.TimePlayed, this.PersistentID);
 
-                    var cmd = new SQLiteCommand(query, DBManager.Connection);
-                    cmd.ExecuteNonQuery();
-                }
-                else
-                {
-                    var query =
-                        string.Format(
-                            "INSERT INTO toons (id, name, hashCode, class, gender, level, experience, timePlayed, accountId) VALUES({0},'{1}',{2},{3},{4},{5},{6},{7},{8})",
-                            this.PersistentID, this.Name, this.HashCode, (byte)this.Class, (byte)this.Gender, this.Level, this.ExperienceNext, this.TimePlayed, this.GameAccount.PersistentID);
-
-                    var cmd = new SQLiteCommand(query, DBManager.Connection);
-                    cmd.ExecuteNonQuery();
-                    Logger.Debug("Create Toon for the first time in DB {0}", this.PersistentID);
-                }
-            }
-            catch (Exception e)
-            {
-                Logger.ErrorException(e, "Toon.SaveToDB()");
-            }
-        }
-
-        public bool DeleteFromDB()
-        {
-            try
-            {
-                // Remove from DB
-                if (!ExistsInDB()) return false;
-
-                //delete items from DB
-                var itemQuery = string.Format("DELETE FROM inventory WHERE toon_id={0}", this.PersistentID);
-                var itemCmd = new SQLiteCommand(itemQuery, DBManager.Connection);
-                itemCmd.ExecuteNonQuery();
-
-                //delete entry from active_skills table
-                var asSkillquery = string.Format("DELETE FROM active_skills WHERE id_toon={0}", this.PersistentID);
-                var asCmd = new SQLiteCommand(asSkillquery, DBManager.Connection);
-                asCmd.ExecuteNonQuery();
-
-                //delete the actual toon from toons table
-                var query = string.Format("DELETE FROM toons WHERE id={0}", this.PersistentID);
-                var cmd = new SQLiteCommand(query, DBManager.Connection);
-                cmd.ExecuteNonQuery();
-				
-				Logger.Debug("Deleting toon {0}",this.PersistentID);
-                return true;
-            }
-            catch (Exception e)
-            {
-                Logger.ErrorException(e, "Toon.DeleteFromDB()");
-                return false;
-            }
-        }
-
-        private bool ExistsInDB()
-        {
-            var query = string.Format("SELECT id FROM toons WHERE id={0}", this.PersistentID);
-
-            var cmd = new SQLiteCommand(query, DBManager.Connection);
-            var reader = cmd.ExecuteReader();
-            return reader.HasRows;
-        }
-
+        /*
         private bool VisualItemExistsInDb(int slot)
         {
-            var query = string.Format("SELECT toon_id FROM inventory WHERE toon_id = {0} AND equipment_slot = {1} AND inventory_type = 'equipped'", this.PersistentID, slot);
+            var query = string.Format("SELECT toon_id FROM inventory WHERE toon_id = {0} AND equipment_slot = {1}", this.PersistentID, slot);
             var cmd = new SQLiteCommand(query, DBManager.Connection);
             var reader = cmd.ExecuteReader();
             return reader.HasRows;
-        }
+        }*/
     }
-    #endregion
+        #endregion
 
     #region Definitions and Enums
     //Order is important as actor voices and saved data is based on enum index
-    public enum ToonClass
+    public enum ToonClass// : uint
     {
-        Barbarian, // 0x4FB91EE2
-        Monk, // 0x3DAC15
-        DemonHunter, // 0xC88B9649
-        WitchDoctor, // 0x343C22A
-        Wizard // 0x1D4681B1
+        Barbarian,// = 0x4FB91EE2,
+        Monk,//= 0x3DAC15,
+        DemonHunter,// = 0xC88B9649,
+        WitchDoctor,// = 0x343C22A,
+        Wizard,// = 0x1D4681B1
     }
 
     [Flags]

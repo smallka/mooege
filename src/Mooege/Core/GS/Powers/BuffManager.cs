@@ -48,6 +48,8 @@ namespace Mooege.Core.GS.Powers
 
         public bool AddBuff(Actor user, Actor target, Buff buff)
         {
+            if (user.World == null || target.World == null) return false;
+
             buff.User = user;
             buff.Target = target;
             buff.World = target.World;
@@ -107,6 +109,11 @@ namespace Mooege.Core.GS.Powers
         {
             if (!_buffs.ContainsKey(target)) return null;
             return _buffs[target].Where(b => b != null).ToArray();
+        }
+
+        public bool HasBuff<T>(Actor target) where T : Buff
+        {
+            return GetFirstBuff<T>(target) != null;
         }
 
         public void SendTargetPayload(Actor target, Payloads.Payload payload)

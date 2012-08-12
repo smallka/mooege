@@ -32,6 +32,7 @@ namespace Mooege.Core.MooNet.Services
         private static readonly Logger Logger = LogManager.CreateLogger();
         public MooNetClient Client { get; set; }
         public bnet.protocol.Header LastCallHeader { get; set; }
+        public uint Status { get; set; }
 
         public override void GetContentHandle(IRpcController controller, bnet.protocol.resources.ContentHandleRequest request, Action<bnet.protocol.ContentHandle> done)
         {
@@ -39,8 +40,8 @@ namespace Mooege.Core.MooNet.Services
             if (request.ProgramId == (uint)FieldKeyHelper.Program.BNet)
             {
                 var builder = bnet.protocol.ContentHandle.CreateBuilder()
-                    .SetRegion(VersionInfo.MooNet.Region)
-                    .SetUsage(0x50465459) //PFTY - ProfanityFilter
+                    .SetRegion(VersionInfo.MooNet.Regions[VersionInfo.MooNet.Region])
+                    .SetUsage(0x70667479) //pfty - ProfanityFilter
                     .SetHash(ByteString.CopyFrom(VersionInfo.MooNet.Resources.ProfanityFilterHash.ToByteArray()));
 
                 done(builder.Build());
@@ -48,7 +49,7 @@ namespace Mooege.Core.MooNet.Services
             else if (request.ProgramId == (uint)FieldKeyHelper.Program.D3)
             {
                 var builder = bnet.protocol.ContentHandle.CreateBuilder()
-                    .SetRegion(VersionInfo.MooNet.Region)
+                    .SetRegion(VersionInfo.MooNet.Regions[VersionInfo.MooNet.Region])
                     .SetUsage(0x643373); //d3s - d3 Schema
                 switch (request.StreamId)
                 {
@@ -58,17 +59,16 @@ namespace Mooege.Core.MooNet.Services
                     case 0x71756573: //ques - Available Quests
                         builder.SetHash(ByteString.CopyFrom(VersionInfo.MooNet.Resources.AvailableQuests.ToByteArray()));
                         break;
-                    case 0x72707273: //rprs - ?
-                        builder.SetHash(ByteString.CopyFrom("3c2d2031f603f912b9963cc6c8deb810ee207efbadbd3fbe01eb2edb905ae507".ToByteArray()));
+                    case 0x72707273: //rprs - RichPresence
+                        builder.SetHash(ByteString.CopyFrom("bb41b5176f172cd217a137e7c19d19a4827c48877fe5a2ec94e2d3658612afdf".ToByteArray()));
                         break;
                     default:
                         Logger.Warn("Unknown StreamId: 0x{0:X8}", request.StreamId);
+                        builder.SetHash(ByteString.Empty);
+                        Status = 4;
                         break;
                 }
-                if (builder.HasHash)
-                    done(builder.Build());
-                //else
-                //Return header status 4
+                done(builder.Build());
             }
         }
     }

@@ -23,11 +23,12 @@ using Mooege.Net.MooNet;
 namespace Mooege.Core.MooNet.Services
 {
     [Service(serviceID: 0xe, serviceName: "bnet.protocol.search.SearchService")]
-    public class SearchService : bnet.protocol.search.SearchService,IServerService
+    public class SearchService : bnet.protocol.search.SearchService, IServerService
     {
         private static readonly Logger Logger = LogManager.CreateLogger();
         public MooNetClient Client { get; set; }
         public bnet.protocol.Header LastCallHeader { get; set; }
+        public uint Status { get; set; }
 
         public override void FindMatches(IRpcController controller, bnet.protocol.search.FindMatchesRequest request, Action<bnet.protocol.search.FindMatchesResponse> done)
         {
