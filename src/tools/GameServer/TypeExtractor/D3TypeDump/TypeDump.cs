@@ -222,16 +222,29 @@ namespace D3TypeDump
         #endregion
 
         #region build 1.0.3.10485 addresses
-        const int OpcodeSwitch_Address = 0x008F8740;
-        const int TypeDescriptorsAddress = 0x0159A194;
+        //const int OpcodeSwitch_Address = 0x008F8740;
+        //const int TypeDescriptorsAddress = 0x0159A194;
+        //const int TypeDescriptorsOffset = 40;
+        //const int AttributesAddress = 0x0157D518;
+        //const int AttributeCount = 826;
+        //const int Attribute_Int = 0x1373F00;
+        //const int Attribute_IntMinMax = 0x1373F08;
+        //const int Attribute_FloatMinMax = 0x1373F10;
+        //const int Attribute_Float16 = 0x1373F18;
+        //const int Attribute_Float16Or32 = 0x1373F20;
+        #endregion
+
+        #region build 1.0.4.11327 addresses
+        const int OpcodeSwitch_Address = 0x008F9CD0;
+        const int TypeDescriptorsAddress = 0x0153D574;
         const int TypeDescriptorsOffset = 40;
-        const int AttributesAddress = 0x0157D518;
-        const int AttributeCount = 826;
-        const int Attribute_Int = 0x1373F00;
-        const int Attribute_IntMinMax = 0x1373F08;
-        const int Attribute_FloatMinMax = 0x1373F10;
-        const int Attribute_Float16 = 0x1373F18;
-        const int Attribute_Float16Or32 = 0x1373F20;
+        const int AttributesAddress = 0x01520518;
+        const int AttributeCount = 847;
+        const int Attribute_Int = 0x131E70C;
+        const int Attribute_IntMinMax = 0x131E714;
+        const int Attribute_FloatMinMax = 0x131E71C;
+        const int Attribute_Float16 = 0x131E724;
+        const int Attribute_Float16Or32 = 0x131E72C;
         #endregion
 
         class GameMessageInfo
@@ -449,7 +462,9 @@ namespace D3TypeDump
                     case Attribute_FloatMinMax: // DecodeFloatMinMax
                         throw new Exception("FloatMinMax used");
                     default:
-                        throw new Exception("Unknown decoder used");
+                        System.Console.WriteLine("id:{0}, name:{1},decoder:{2}", id, name, decoder.Int32);
+                        break;
+                        //throw new Exception("Unknown decoder used");
                 }
             }
             NetAttribute.SaveXml("attributes.xml");
